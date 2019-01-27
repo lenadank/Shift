@@ -32,25 +32,12 @@ public class SignUpActivity extends Activity {
     public void checkButton(View v) {
         int radioId = radioGroup.getCheckedRadioButtonId();
         radioButton = findViewById(radioId);
-        bRegister = (Button) findViewById(R.id.bRegister);
-        bRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                switch (v.getId()) {
-                    case R.id.bRegister:
 
-                        String name = editName.getText().toString();
-                        String gender = radioButton.getText().toString();
+        String name = editName.getText().toString();
+        String gender = radioButton.getText().toString();
+        User user = new User(name, gender);
+        new PersonalInfo(SignUpActivity.this, user);
 
-                        User user = new User(name, gender);
-                        new PersonalInfo(SignUpActivity.this, user);
-                        break;
-
-                }
-            }
-
-            ;
-        });
         Intent intent = new Intent(getApplicationContext(), InterestsActivity.class);
         startActivity(intent);
     }

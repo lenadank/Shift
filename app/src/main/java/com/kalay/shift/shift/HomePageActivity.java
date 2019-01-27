@@ -18,17 +18,19 @@ public class HomePageActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         nameText = findViewById(R.id.textView);
-        nameText.setText("דף הבית \n שלום "+ "[שם]");
     }
-    public void changeTimes(View x){
+
+    public void changeTimes(View x) {
         Intent myIntent = new Intent(this, AddPersonalTime.class);
         startActivity(myIntent);
     }
-    public void  changeInterests(View z){
+
+    public void changeInterests(View z) {
         Intent myIntent = new Intent(this, prefrencesChangesActivity.class);
         startActivity(myIntent);
     }
-    public void addNotifications(View y){
+
+    public void addNotifications(View y) {
         Intent myIntent = new Intent(this, SetAlert.class);
         startActivity(myIntent);
     }
