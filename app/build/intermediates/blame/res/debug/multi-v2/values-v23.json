@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\IBM_ADMIN\\Desktop\\Shift\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\IBM_ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\7f5f2fd502ac3b28b6644dff5639048d\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\IBM_ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\92e36bd3782bbef6acbad7522a680665\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\IBM_ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-26.1.0.aar\\3ff4f9cf1d897138a453ee64b2d51a52\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\IBM_ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-26.1.0.aar\\24fed76960f892b3cdbf95edc1b93534\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

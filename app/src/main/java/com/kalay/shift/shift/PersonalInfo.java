@@ -2,7 +2,6 @@ package com.kalay.shift.shift;
 
 
 import android.app.Activity;
-import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;

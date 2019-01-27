@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\IBM_ADMIN\\Desktop\\Shift\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\IBM_ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\7f5f2fd502ac3b28b6644dff5639048d\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\IBM_ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\92e36bd3782bbef6acbad7522a680665\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\IBM_ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\62b32c7b615e2145caad914930cc3b7c\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\IBM_ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\80f61a7952cf1446979219089a3f168d\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

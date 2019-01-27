@@ -1,19 +1,24 @@
 package com.kalay.shift.shift;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 
 /**
  * Created by gal zohar on 4/6/2018.
  */
 
-public class HomePageActivity extends AppCompatActivity {
+public class HomePageActivity extends Activity {
+    public TextView nameText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+        nameText = findViewById(R.id.textView);
+        nameText.setText("דף הבית \n שלום "+ "[שם]");
     }
     public void changeTimes(View x){
         Intent myIntent = new Intent(this, AddPersonalTime.class);

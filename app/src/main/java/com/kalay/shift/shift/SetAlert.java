@@ -2,7 +2,6 @@ package com.kalay.shift.shift;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +13,7 @@ import android.widget.Toast;
  * Created by romdolinger on 4/14/18.
  */
 
-public class SetAlert extends AppCompatActivity {
+public class SetAlert extends Activity {
 
     SharedPreferencesManager sharedPreferencesManager;
     Activity activity = this;

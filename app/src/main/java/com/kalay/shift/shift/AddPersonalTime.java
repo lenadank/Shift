@@ -1,5 +1,6 @@
 package com.kalay.shift.shift;
 
+import android.app.Activity;
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
+
 import com.mcsoft.timerangepickerdialog.RangeTimePickerDialog;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ import java.util.List;
  * Created by romdolinger on 4/14/18.
  */
 
-public class AddPersonalTime extends AppCompatActivity implements RangeTimePickerDialog.ISelectedTime {
+public class AddPersonalTime extends Activity implements RangeTimePickerDialog.ISelectedTime {
 
     int i = AlertsSaver.startKey;
     static final String names[] = {"שבת", "שישי", "חמישי", "רביעי", "שלישי", "שני", "ראשון"};

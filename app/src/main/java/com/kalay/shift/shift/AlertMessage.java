@@ -1,12 +1,12 @@
 package com.kalay.shift.shift;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 /**
  * Created by romdolinger on 4/8/18.
  */
 
-public class AlertMessage extends AppCompatActivity {
+public class AlertMessage extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

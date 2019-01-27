@@ -1,6 +1,6 @@
 package com.kalay.shift.shift;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
-public class prefrencesChangesActivity extends AppCompatActivity {
+public class prefrencesChangesActivity extends Activity {
     ArrayList<CheckBox> check1 = new ArrayList<CheckBox>();
 
     @Override
