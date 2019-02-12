@@ -1,24 +1,58 @@
-*.iml
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
-.DS_Store
-/build
-/captures
+# built application files
+*.apk
+*.ap_
 .externalNativeBuild
-.idea/gradle.xml
+
+# files for the dex VM
+*.dex
+
+# generated files
+bin/
+gen/
+
+# Intellij project files
+*.iws
+.idea/workspace.xml
+.idea/tasks.xml
+
+# Built application files
+/*/build/
+/captures
+
+# Crashlytics configuations
+com_crashlytics_export_strings.xml
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Gradle generated files
+.gradle/
+
+# Signing files
+.signing/
+
+# User-specific configurations
+.idea/libraries/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/.name
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/encodings.xml
 .idea/misc.xml
 .idea/modules.xml
-.idea/runConfigurations.xml
+.idea/navEditor.xml
+.idea/scopes/scope_settings.xml
+.idea/assetWizardSettings.xml
 .idea/vcs.xml
-app/proguard-rules.pro
-gradlew
-gradlew.bat
-*.pro
-gradlew
-gradlew.bat
-.idea/gradle.xml
-.idea/gradle.xml
-.idea/misc.xml
-app/src/main/res/layout/activity_personal_time.xml
+.idea/caches
+*.iml
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
