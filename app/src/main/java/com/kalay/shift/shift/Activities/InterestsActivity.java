@@ -43,7 +43,9 @@ public class InterestsActivity extends Activity {
 
     public void moveBack (View v) {
         //todo moves to PersonalInfo class
-        Toast.makeText(getApplicationContext(),"Not Working !!!", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
+        startActivity(intent);
+        // Toast.makeText(getApplicationContext(),"Not Working !!!", Toast.LENGTH_SHORT).show();
         //Intent intent = new Intent(getApplicationContext(), PersonalInfo.class);
         //startActivity(intent);
     }
