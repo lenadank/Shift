@@ -1,7 +1,0 @@
-#Sun Feb 17 14:24:34 IST 2019
-base.0=C\:\\Users\\IBM_ADMIN\\Desktop\\Shift1\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
-path.1=classes.dex
-renamed.1=classes2.dex
-path.0=classes.dex
-renamed.0=classes.dex
-base.1=C\:\\Users\\IBM_ADMIN\\Desktop\\Shift1\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
