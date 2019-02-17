@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\IBM_ADMIN\\Desktop\\Shift\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "C:\\Users\\IBM_ADMIN\\Desktop\\Shift1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\IBM_ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\92e36bd3782bbef6acbad7522a680665\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\IBM_ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\f2486e7b1ed7bb9daeb78192b7f46760\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\IBM_ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-26.1.0.aar\\24fed76960f892b3cdbf95edc1b93534\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\IBM_ADMIN\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-26.1.0.aar\\0ab7b8ad6cfbe998b8ec8930a0b65d0b\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

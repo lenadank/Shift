@@ -1,225 +1,225 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:2:1-32:12
-MERGED from [com.github.PuffoCyano:Range-Time-Picker-Dialog:v1.5] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\Range-Time-Picker-Dialog-v1.5.aar\5950e4d669e33bf50c9efe2f98690b85\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:design:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\80f61a7952cf1446979219089a3f168d\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\92e36bd3782bbef6acbad7522a680665\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\26b3944e5d08556d840d22fa8f3aa32a\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\24fed76960f892b3cdbf95edc1b93534\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\9e27af20ff755e2d5be479c50826a6da\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\0974a4cb71a6094cc1defa57728a9140\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\860c683af6014d288595db4297958db4\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:transition:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\2db69003a1569c0fc4b6bcac4d0ad215\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\96aced429c2bf92cd0abc14411e1c455\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\4aa52a1b3bfd17d138456da03f076dda\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\a789860ced02c66c10d3186fe9a09637\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\16e70732f6435f7f8f532b491d25c55b\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\430c068d0c9e8cfd7cb86e5196f0f5c0\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\35589d1a003833fd56d5da734ca68a63\AndroidManifest.xml:17:1-31:12
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\94bb4e239092ccefa1fcb496d7372bc8\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:2:1-32:12
+ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:2:1-32:12
+MERGED from [com.github.PuffoCyano:Range-Time-Picker-Dialog:v1.5] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\Range-Time-Picker-Dialog-v1.5.aar\4c6c04a58bb5d4d0cc9aa618c220b3b4\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\36e43e47153baa0713455fa0c2414c0f\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\0ab7b8ad6cfbe998b8ec8930a0b65d0b\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:design:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\ed595a093eb6c81be6965b2486f8ed3d\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\f2486e7b1ed7bb9daeb78192b7f46760\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\b44d4d83ec308af8631f8cc3d1e8fa55\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\007bb43fe8258ba68e0ae036248c186c\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\7c1d08d67f020c052f9d6870d3478b34\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:transition:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\1f4022266012d722e75ea432f114fcec\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\9ee47f989e7246f3df94f5bd4fbeba24\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\0c5cbb3cc55cd101089394673294e0c4\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\3af1dee6b231cfa27b6c45676c3f4a4a\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\02f1ffea053705e41a5278a09cfa8d9b\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\ef9a98ece7bce28875c73e36a6331017\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\d319e3713d740365594d394fcc7c021b\AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\91dd7e55145b82e4a7736c2b1850c898\AndroidManifest.xml:17:1-30:12
+INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:2:1-32:12
 	package
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:3:5-36
-		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:3:5-36
+		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:2:1-32:12
-		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:2:1-32:12
+		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:2:1-32:12
-		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:2:1-32:12
+		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.WAKE_LOCK
-ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:4:5-67
+ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:4:5-67
 	android:name
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:4:22-65
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:4:22-65
 application
-ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:5:5-30:19
-MERGED from [com.android.support:design:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\80f61a7952cf1446979219089a3f168d\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:design:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\80f61a7952cf1446979219089a3f168d\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\92e36bd3782bbef6acbad7522a680665\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\92e36bd3782bbef6acbad7522a680665\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\26b3944e5d08556d840d22fa8f3aa32a\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\26b3944e5d08556d840d22fa8f3aa32a\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\24fed76960f892b3cdbf95edc1b93534\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\24fed76960f892b3cdbf95edc1b93534\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\9e27af20ff755e2d5be479c50826a6da\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\9e27af20ff755e2d5be479c50826a6da\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\0974a4cb71a6094cc1defa57728a9140\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\0974a4cb71a6094cc1defa57728a9140\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\860c683af6014d288595db4297958db4\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\860c683af6014d288595db4297958db4\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:transition:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\2db69003a1569c0fc4b6bcac4d0ad215\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:transition:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\2db69003a1569c0fc4b6bcac4d0ad215\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\96aced429c2bf92cd0abc14411e1c455\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\96aced429c2bf92cd0abc14411e1c455\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\4aa52a1b3bfd17d138456da03f076dda\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\4aa52a1b3bfd17d138456da03f076dda\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\a789860ced02c66c10d3186fe9a09637\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\a789860ced02c66c10d3186fe9a09637\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\16e70732f6435f7f8f532b491d25c55b\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\16e70732f6435f7f8f532b491d25c55b\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\430c068d0c9e8cfd7cb86e5196f0f5c0\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\430c068d0c9e8cfd7cb86e5196f0f5c0\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\35589d1a003833fd56d5da734ca68a63\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\35589d1a003833fd56d5da734ca68a63\AndroidManifest.xml:25:5-29:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\94bb4e239092ccefa1fcb496d7372bc8\AndroidManifest.xml:24:5-28:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\94bb4e239092ccefa1fcb496d7372bc8\AndroidManifest.xml:24:5-28:19
+ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:5:5-30:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\36e43e47153baa0713455fa0c2414c0f\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\36e43e47153baa0713455fa0c2414c0f\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\0ab7b8ad6cfbe998b8ec8930a0b65d0b\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\0ab7b8ad6cfbe998b8ec8930a0b65d0b\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:design:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\ed595a093eb6c81be6965b2486f8ed3d\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\ed595a093eb6c81be6965b2486f8ed3d\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\f2486e7b1ed7bb9daeb78192b7f46760\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\f2486e7b1ed7bb9daeb78192b7f46760\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\b44d4d83ec308af8631f8cc3d1e8fa55\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\b44d4d83ec308af8631f8cc3d1e8fa55\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\007bb43fe8258ba68e0ae036248c186c\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\007bb43fe8258ba68e0ae036248c186c\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\7c1d08d67f020c052f9d6870d3478b34\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\7c1d08d67f020c052f9d6870d3478b34\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\1f4022266012d722e75ea432f114fcec\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\1f4022266012d722e75ea432f114fcec\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\9ee47f989e7246f3df94f5bd4fbeba24\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\9ee47f989e7246f3df94f5bd4fbeba24\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\0c5cbb3cc55cd101089394673294e0c4\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\0c5cbb3cc55cd101089394673294e0c4\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\3af1dee6b231cfa27b6c45676c3f4a4a\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\3af1dee6b231cfa27b6c45676c3f4a4a\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\02f1ffea053705e41a5278a09cfa8d9b\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\02f1ffea053705e41a5278a09cfa8d9b\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\ef9a98ece7bce28875c73e36a6331017\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\ef9a98ece7bce28875c73e36a6331017\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\d319e3713d740365594d394fcc7c021b\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\d319e3713d740365594d394fcc7c021b\AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\91dd7e55145b82e4a7736c2b1850c898\AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\91dd7e55145b82e4a7736c2b1850c898\AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:11:9-40
-activity#com.kalay.shift.shift.AddPersonalTime
-ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:13:9-52
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.kalay.shift.shift.Activities.AddPersonalTimeActivity
+ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:13:9-71
 	android:name
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:13:19-50
-activity#com.kalay.shift.shift.SignUpActivity
-ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:14:9-52
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:13:19-69
+activity#com.kalay.shift.shift.Activities.SignUpActivity
+ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:14:9-63
 	android:name
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:14:19-49
-activity#com.kalay.shift.shift.InterestsActivity
-ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:15:9-55
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:14:19-60
+activity#com.kalay.shift.shift.Activities.InterestsActivity
+ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:15:9-66
 	android:name
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:15:19-52
-activity#com.kalay.shift.shift.HomePageActivity
-ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:16:9-54
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:15:19-63
+activity#com.kalay.shift.shift.Activities.HomePageActivity
+ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:16:9-65
 	android:name
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:16:19-51
-activity#com.kalay.shift.shift.prefrencesChangesActivity
-ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:17:9-63
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:16:19-62
+activity#com.kalay.shift.shift.Activities.prefrencesChangesActivity
+ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:17:9-74
 	android:name
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:17:19-60
-activity#com.kalay.shift.shift.SetAlert
-ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:18:9-46
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:17:19-71
+activity#com.kalay.shift.shift.Activities.SetAlertActivity
+ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:18:9-65
 	android:name
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:18:19-43
-activity#com.kalay.shift.shift.interests.InterestSportsActivity
-ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:19:9-69
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:18:19-62
+activity#com.kalay.shift.shift.Activities.InterestSportsActivity
+ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:19:9-70
 	android:name
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:19:19-67
-activity#com.kalay.shift.shift.interests.InterestCultureActivity
-ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:20:9-71
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:19:19-68
+activity#com.kalay.shift.shift.Activities.InterestCultureActivity
+ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:20:9-72
 	android:name
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:20:19-68
-activity#com.kalay.shift.shift.interests.InterestTripsActivity
-ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:21:9-69
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:20:19-69
+activity#com.kalay.shift.shift.Activities.InterestTripsActivity
+ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:21:9-70
 	android:name
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:21:19-66
-activity#com.kalay.shift.shift.interests.InterestFamilyActivity
-ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:22:9-70
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:21:19-67
+activity#com.kalay.shift.shift.Activities.InterestFamilyActivity
+ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:22:9-71
 	android:name
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:22:19-67
-activity#com.kalay.shift.shift.MainActivity
-ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:23:9-29:20
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:22:19-68
+activity#com.kalay.shift.shift.Activities.MainActivity
+ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:23:9-29:20
 	android:name
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:23:19-47
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:23:19-58
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:24:13-28:29
+ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:24:13-28:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:25:17-69
+ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:25:25-66
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:27:17-77
+ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml:27:27-74
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml:27:27-74
 uses-sdk
-INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml
-MERGED from [com.github.PuffoCyano:Range-Time-Picker-Dialog:v1.5] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\Range-Time-Picker-Dialog-v1.5.aar\5950e4d669e33bf50c9efe2f98690b85\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.PuffoCyano:Range-Time-Picker-Dialog:v1.5] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\Range-Time-Picker-Dialog-v1.5.aar\5950e4d669e33bf50c9efe2f98690b85\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:design:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\80f61a7952cf1446979219089a3f168d\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:design:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\80f61a7952cf1446979219089a3f168d\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\92e36bd3782bbef6acbad7522a680665\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\92e36bd3782bbef6acbad7522a680665\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\26b3944e5d08556d840d22fa8f3aa32a\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\26b3944e5d08556d840d22fa8f3aa32a\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\24fed76960f892b3cdbf95edc1b93534\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\24fed76960f892b3cdbf95edc1b93534\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\9e27af20ff755e2d5be479c50826a6da\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\9e27af20ff755e2d5be479c50826a6da\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\0974a4cb71a6094cc1defa57728a9140\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\0974a4cb71a6094cc1defa57728a9140\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\860c683af6014d288595db4297958db4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\860c683af6014d288595db4297958db4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\2db69003a1569c0fc4b6bcac4d0ad215\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\2db69003a1569c0fc4b6bcac4d0ad215\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\96aced429c2bf92cd0abc14411e1c455\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\96aced429c2bf92cd0abc14411e1c455\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\4aa52a1b3bfd17d138456da03f076dda\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\4aa52a1b3bfd17d138456da03f076dda\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\a789860ced02c66c10d3186fe9a09637\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\a789860ced02c66c10d3186fe9a09637\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\16e70732f6435f7f8f532b491d25c55b\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\16e70732f6435f7f8f532b491d25c55b\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\430c068d0c9e8cfd7cb86e5196f0f5c0\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\430c068d0c9e8cfd7cb86e5196f0f5c0\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\35589d1a003833fd56d5da734ca68a63\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\35589d1a003833fd56d5da734ca68a63\AndroidManifest.xml:21:5-23:58
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\94bb4e239092ccefa1fcb496d7372bc8\AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\94bb4e239092ccefa1fcb496d7372bc8\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml
+MERGED from [com.github.PuffoCyano:Range-Time-Picker-Dialog:v1.5] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\Range-Time-Picker-Dialog-v1.5.aar\4c6c04a58bb5d4d0cc9aa618c220b3b4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.PuffoCyano:Range-Time-Picker-Dialog:v1.5] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\Range-Time-Picker-Dialog-v1.5.aar\4c6c04a58bb5d4d0cc9aa618c220b3b4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\36e43e47153baa0713455fa0c2414c0f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\36e43e47153baa0713455fa0c2414c0f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\0ab7b8ad6cfbe998b8ec8930a0b65d0b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\0ab7b8ad6cfbe998b8ec8930a0b65d0b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\ed595a093eb6c81be6965b2486f8ed3d\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\ed595a093eb6c81be6965b2486f8ed3d\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\f2486e7b1ed7bb9daeb78192b7f46760\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\f2486e7b1ed7bb9daeb78192b7f46760\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\b44d4d83ec308af8631f8cc3d1e8fa55\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\b44d4d83ec308af8631f8cc3d1e8fa55\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\007bb43fe8258ba68e0ae036248c186c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\007bb43fe8258ba68e0ae036248c186c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\7c1d08d67f020c052f9d6870d3478b34\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\7c1d08d67f020c052f9d6870d3478b34\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\1f4022266012d722e75ea432f114fcec\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\1f4022266012d722e75ea432f114fcec\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\9ee47f989e7246f3df94f5bd4fbeba24\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\9ee47f989e7246f3df94f5bd4fbeba24\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\0c5cbb3cc55cd101089394673294e0c4\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\0c5cbb3cc55cd101089394673294e0c4\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\3af1dee6b231cfa27b6c45676c3f4a4a\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\3af1dee6b231cfa27b6c45676c3f4a4a\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\02f1ffea053705e41a5278a09cfa8d9b\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\02f1ffea053705e41a5278a09cfa8d9b\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\ef9a98ece7bce28875c73e36a6331017\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\ef9a98ece7bce28875c73e36a6331017\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\d319e3713d740365594d394fcc7c021b\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\d319e3713d740365594d394fcc7c021b\AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\91dd7e55145b82e4a7736c2b1850c898\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\91dd7e55145b82e4a7736c2b1850c898\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\80f61a7952cf1446979219089a3f168d\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\ed595a093eb6c81be6965b2486f8ed3d\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\IBM_ADMIN\Desktop\Shift1\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\80f61a7952cf1446979219089a3f168d\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\92e36bd3782bbef6acbad7522a680665\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\92e36bd3782bbef6acbad7522a680665\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\24fed76960f892b3cdbf95edc1b93534\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\24fed76960f892b3cdbf95edc1b93534\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\9e27af20ff755e2d5be479c50826a6da\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\9e27af20ff755e2d5be479c50826a6da\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\0974a4cb71a6094cc1defa57728a9140\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\0974a4cb71a6094cc1defa57728a9140\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\860c683af6014d288595db4297958db4\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\860c683af6014d288595db4297958db4\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\2db69003a1569c0fc4b6bcac4d0ad215\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\2db69003a1569c0fc4b6bcac4d0ad215\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\96aced429c2bf92cd0abc14411e1c455\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\96aced429c2bf92cd0abc14411e1c455\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\4aa52a1b3bfd17d138456da03f076dda\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\4aa52a1b3bfd17d138456da03f076dda\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\a789860ced02c66c10d3186fe9a09637\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\a789860ced02c66c10d3186fe9a09637\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\16e70732f6435f7f8f532b491d25c55b\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\16e70732f6435f7f8f532b491d25c55b\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\430c068d0c9e8cfd7cb86e5196f0f5c0\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\430c068d0c9e8cfd7cb86e5196f0f5c0\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\35589d1a003833fd56d5da734ca68a63\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\35589d1a003833fd56d5da734ca68a63\AndroidManifest.xml:26:9-28:38
+ADDED from [com.android.support:cardview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\0ab7b8ad6cfbe998b8ec8930a0b65d0b\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:design:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\ed595a093eb6c81be6965b2486f8ed3d\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:design:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\ed595a093eb6c81be6965b2486f8ed3d\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\f2486e7b1ed7bb9daeb78192b7f46760\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\f2486e7b1ed7bb9daeb78192b7f46760\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\b44d4d83ec308af8631f8cc3d1e8fa55\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\b44d4d83ec308af8631f8cc3d1e8fa55\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\007bb43fe8258ba68e0ae036248c186c\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\007bb43fe8258ba68e0ae036248c186c\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\7c1d08d67f020c052f9d6870d3478b34\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\7c1d08d67f020c052f9d6870d3478b34\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\1f4022266012d722e75ea432f114fcec\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\1f4022266012d722e75ea432f114fcec\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\9ee47f989e7246f3df94f5bd4fbeba24\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\9ee47f989e7246f3df94f5bd4fbeba24\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\0c5cbb3cc55cd101089394673294e0c4\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\0c5cbb3cc55cd101089394673294e0c4\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\3af1dee6b231cfa27b6c45676c3f4a4a\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\3af1dee6b231cfa27b6c45676c3f4a4a\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\02f1ffea053705e41a5278a09cfa8d9b\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\02f1ffea053705e41a5278a09cfa8d9b\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\ef9a98ece7bce28875c73e36a6331017\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\ef9a98ece7bce28875c73e36a6331017\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\d319e3713d740365594d394fcc7c021b\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\d319e3713d740365594d394fcc7c021b\AndroidManifest.xml:26:9-28:38
 	android:value
-		ADDED from [com.android.support:design:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\80f61a7952cf1446979219089a3f168d\AndroidManifest.xml:28:13-35
+		ADDED from [com.android.support:cardview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\0ab7b8ad6cfbe998b8ec8930a0b65d0b\AndroidManifest.xml:25:13-35
 	android:name
-		ADDED from [com.android.support:design:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\80f61a7952cf1446979219089a3f168d\AndroidManifest.xml:27:13-51
+		ADDED from [com.android.support:cardview-v7:26.1.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\0ab7b8ad6cfbe998b8ec8930a0b65d0b\AndroidManifest.xml:24:13-51
 meta-data#android.arch.lifecycle.VERSION
-ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\94bb4e239092ccefa1fcb496d7372bc8\AndroidManifest.xml:25:9-27:47
+ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\91dd7e55145b82e4a7736c2b1850c898\AndroidManifest.xml:25:9-27:47
 	android:value
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\94bb4e239092ccefa1fcb496d7372bc8\AndroidManifest.xml:27:13-44
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\91dd7e55145b82e4a7736c2b1850c898\AndroidManifest.xml:27:13-44
 	android:name
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\94bb4e239092ccefa1fcb496d7372bc8\AndroidManifest.xml:26:13-58
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\IBM_ADMIN\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\91dd7e55145b82e4a7736c2b1850c898\AndroidManifest.xml:26:13-58

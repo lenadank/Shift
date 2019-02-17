@@ -10,17 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".AddPersonalTime"/>
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".InterestsActivity" />
-        <activity android:name=".HomePageActivity" />
-        <activity android:name=".prefrencesChangesActivity" />
-        <activity android:name=".SetAlert" />
-        <activity android:name=".interests.InterestSportsActivity"/>
-        <activity android:name=".interests.InterestCultureActivity" />
-        <activity android:name=".interests.InterestTripsActivity" />
-        <activity android:name=".interests.InterestFamilyActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activities.AddPersonalTimeActivity"/>
+        <activity android:name=".Activities.SignUpActivity" />
+        <activity android:name=".Activities.InterestsActivity" />
+        <activity android:name=".Activities.HomePageActivity" />
+        <activity android:name=".Activities.prefrencesChangesActivity" />
+        <activity android:name=".Activities.SetAlertActivity" />
+        <activity android:name=".Activities.InterestSportsActivity"/>
+        <activity android:name=".Activities.InterestCultureActivity" />
+        <activity android:name=".Activities.InterestTripsActivity" />
+        <activity android:name=".Activities.InterestFamilyActivity" />
+        <activity android:name=".Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
