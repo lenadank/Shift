@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -29,12 +30,35 @@ public class SignUpActivity extends Activity {
         radioGroup = findViewById(R.id.radioGroup);
     }
 
-    public void enterName(View v){
-        editName.getText().clear();
+    public void checker(View v){
+        String name = editName.getText().toString();
+        int radioId = radioGroup.getCheckedRadioButtonId();
+        final TextView ErrorText = (TextView) findViewById(R.id.ErrorView);
+
+
+        if ((name.equals("")) && (radioId == -1)){
+            ErrorText.setText("אנא תכניס שם ומין");
+            ErrorText.setVisibility(View.VISIBLE);
+        }
+        if ((!name.equals("")) && (radioId == -1)){
+            ErrorText.setText("אנא תכניס מין");
+            ErrorText.setVisibility(View.VISIBLE);
+        }
+        if ((name.equals("")) && (radioId != -1)){
+            ErrorText.setText("אנא תכניס שם");
+            ErrorText.setVisibility(View.VISIBLE);
+        }
+        if ((!name.equals("")) && (radioId != -1)) {
+            signUpButton(v);
+        }
+
+
+
     }
 
-    public void checkButton(View v) {
+    public void signUpButton(View v) {
         int radioId = radioGroup.getCheckedRadioButtonId();
+
         radioButton = findViewById(radioId);
 
         String name = editName.getText().toString();
