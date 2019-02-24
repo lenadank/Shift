@@ -11,6 +11,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.kalay.shift.shift.Classes.PersonalInfo;
+import com.kalay.shift.shift.Classes.SharedPreferencesManager;
 import com.kalay.shift.shift.R;
 import com.kalay.shift.shift.Classes.User;
 
@@ -28,6 +29,8 @@ public class SignUpActivity extends Activity {
 
         editName = (EditText) findViewById(R.id.editName);
         radioGroup = findViewById(R.id.radioGroup);
+
+        
     }
 
     public void checker(View v){
@@ -64,7 +67,10 @@ public class SignUpActivity extends Activity {
         String name = editName.getText().toString();
         String gender = radioButton.getText().toString();
         User user = new User(name, gender);
-        new PersonalInfo(SignUpActivity.this, user);
+//        new PersonalInfo(SignUpActivity.this, user);
+        SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
+        manager.storeData(SignUpActivity.this,"User",user);
+
 
         Intent intent = new Intent(getApplicationContext(), InterestsActivity.class);
         startActivity(intent);
