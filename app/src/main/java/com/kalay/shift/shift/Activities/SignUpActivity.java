@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.kalay.shift.shift.Classes.PersonalInfo;
 import com.kalay.shift.shift.Classes.SharedPreferencesManager;
@@ -29,8 +30,21 @@ public class SignUpActivity extends Activity {
 
         editName = (EditText) findViewById(R.id.editName);
         radioGroup = findViewById(R.id.radioGroup);
+        RadioButton maleButton = findViewById(R.id.male);
+        RadioButton femaleButton = findViewById(R.id.female);
 
-        
+        SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
+        User u = (User) manager.getStoredData(SignUpActivity.this, "User", User.class);
+        if (u != null){
+            editName.setText(u.getName());
+            if (u.getGender().equals("זכר")){
+                maleButton.setChecked(true);
+            }
+            else {
+                femaleButton.setChecked(true);
+            }
+        }
+
     }
 
     public void checker(View v){

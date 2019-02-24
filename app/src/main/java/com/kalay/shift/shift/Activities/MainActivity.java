@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 
 import com.kalay.shift.shift.Classes.LocalService;
+import com.kalay.shift.shift.Classes.SharedPreferencesManager;
+import com.kalay.shift.shift.Classes.User;
 import com.kalay.shift.shift.R;
 
 public class MainActivity extends Activity {
@@ -15,6 +17,14 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
+//        User u = (User) manager.getStoredData(MainActivity.this, "User", User.class);
+//        if(u != null) {
+//            Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
+//            startActivity(intent);
+//        }
+
+
         setContentView(R.layout.activity_main);
         currActivity = this;
         startService(new Intent(this, LocalService.class));
