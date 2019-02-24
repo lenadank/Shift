@@ -1,6 +1,7 @@
 package com.kalay.shift.shift.Activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
@@ -40,4 +41,11 @@ public class prefrencesChangesActivity extends Activity {
         }
         new FieldsOfInterest(this, check_info);
     }
+
+    public void moveToHome(View v) {
+        //todo moves to HomePage class
+        Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
+        startActivity(intent);
+    }
+
 }

@@ -26,7 +26,7 @@ import java.util.List;
 public class AddPersonalTimeActivity extends Activity implements RangeTimePickerDialog.ISelectedTime {
 
     int i = AlertsSaver.startKey;
-    static final String names[] = {"שבת", "שישי", "חמישי", "רביעי", "שלישי", "שני", "ראשון"};
+    static final String names[] = {"ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שבת"};
     static CheckBox[] daysArr = new CheckBox[7];
     Spinner dropdown;
     List<Integer> keyList;
