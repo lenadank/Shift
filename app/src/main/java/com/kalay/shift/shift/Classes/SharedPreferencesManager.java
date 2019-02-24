@@ -30,7 +30,7 @@ public class SharedPreferencesManager {
     }
     // key is a sort of id that has to be a string. To call something, you need to use its key. //
     public void storeData(Activity activity, String key, Object data) {
-        SharedPreferences sharedPref = activity.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = activity.getSharedPreferences("database", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         Gson gson = new Gson();
         String json = gson.toJson(data);
@@ -38,11 +38,11 @@ public class SharedPreferencesManager {
         editor.commit();
     }
 
-    public Object getStoredData(Activity activity, String key) {
-        SharedPreferences sharedPref = activity.getPreferences(Context.MODE_PRIVATE);
+    public Object getStoredData(Activity activity, String key, Class savedClass) {
+        SharedPreferences sharedPref = activity.getSharedPreferences("database", Context.MODE_PRIVATE);
         Gson gson = new Gson();
         String json = sharedPref.getString(key, null);
-        return gson.fromJson(json, Object.class);
+        return gson.fromJson(json, savedClass);
     }
 
     public String nextEmpty (Activity activity) {

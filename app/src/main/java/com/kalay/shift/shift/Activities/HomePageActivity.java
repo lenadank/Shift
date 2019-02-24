@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.kalay.shift.shift.Classes.SharedPreferencesManager;
+import com.kalay.shift.shift.Classes.User;
 import com.kalay.shift.shift.R;
 
 /**
@@ -15,11 +17,15 @@ import com.kalay.shift.shift.R;
 public class HomePageActivity extends Activity {
     public TextView nameText;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-        nameText = findViewById(R.id.textView);
+        nameText = findViewById(R.id.welcomeMsg);
+        SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
+        User user = (User) manager.getStoredData(HomePageActivity.this,"User", User.class);
+        nameText.setText("שלום" + user.getName());
     }
 
     public void changeTimes(View x) {

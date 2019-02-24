@@ -45,7 +45,7 @@ public class AlertsSaver {
     }
 
     public AlertsSaver(Activity activity, String key) {
-        this.alert = (Alert) sharedPreferencesManager.getStoredData(activity, key);
+        this.alert = (Alert) sharedPreferencesManager.getStoredData(activity, key, Alert.class);
 //        String alertTitle = ds.substring(0, ds.indexOf(","));
 //        ds = ds.replace(alertTitle, "");
 //        ds = ds.substring(1);

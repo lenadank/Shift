@@ -1,10 +1,12 @@
 package com.kalay.shift.shift.Classes;
 
+import java.io.Serializable;
+
 /**
  * Created by orim on 5/17/18.
  */
 
-public class User {
+public class User implements Serializable {
 
     private String name;
     private String gender;
