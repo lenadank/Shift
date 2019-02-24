@@ -31,8 +31,8 @@ public class SetAlertActivity extends Activity {
             @Override
             public void onClick(View v) {
                 //todo adds and saves the new alert
-                EditText editText1 = (EditText) v.findViewById(R.id.editText);
-                EditText editText2 = (EditText) v.findViewById(R.id.editText2);
+                EditText editText1 = (EditText) findViewById(R.id.alertText);
+                EditText editText2 = (EditText) findViewById(R.id.alertTitle);
                 String text1, text2;
                 try {
                     text1 = editText1.getText().toString();
@@ -41,7 +41,7 @@ public class SetAlertActivity extends Activity {
                     Toast.makeText(activity, "ALERT " + text2 + " SAVED", Toast.LENGTH_SHORT).show();
                 }
                 catch (NullPointerException e) {
-                    Toast.makeText(activity, "OK", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, "ERROR", Toast.LENGTH_SHORT).show();
                 }
 
             }

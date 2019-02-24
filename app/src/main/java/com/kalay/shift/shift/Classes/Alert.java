@@ -58,5 +58,7 @@ public class Alert implements Serializable {
                  text + "," + this.alertTitle +
                 "," + Arrays.toString(days) +
                 "," + Arrays.toString(hours);
+
+
     }
 }

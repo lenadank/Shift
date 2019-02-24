@@ -15,12 +15,12 @@ public class AlertsSaver {
     private Alert alert;
     private String key;
     public static final String [] hours = {"07:00", "19:00"};
-    public static final boolean [] days = {true, true, true, true, true, false, false};
+    public static final boolean [] days = {true, true, true, true, true, true, true};
     public static final int startKey = 1000;
     private static SharedPreferencesManager sharedPreferencesManager = SharedPreferencesManager.getInstance();
 
     public AlertsSaver(Activity activity, String alert, String[] hours_arr, boolean [] days_arr, String alertTitle) {
-        if (alert != null && hours_arr.length == 2 && days_arr != null) {
+        if (alert != null && !alert.equals("") && hours_arr.length == 2 && days_arr != null) {
             this.alert = new Alert(alert, days_arr, hours_arr, alertTitle);
             this.key = this.sharedPreferencesManager.nextEmpty(activity);
             if (deleted.contains(this.key))
@@ -29,7 +29,7 @@ public class AlertsSaver {
         }
 
     }
-
+    // not critical but could be written better
     private void updateDeleted() {
         boolean changed = false;
         int place = 0;
@@ -73,7 +73,7 @@ public class AlertsSaver {
     }
 
 
-
+    // not in use
     private static boolean[] toBooleanArray(String str) {
         String[] parts = str.split(",");
         boolean[] array = new boolean[parts.length];
