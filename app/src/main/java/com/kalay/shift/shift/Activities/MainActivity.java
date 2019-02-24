@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
         startService(new Intent(this, LocalService.class));
     }
 
-    public void onStart(View v) {
+    public void onPressButton(View v) {
         Log.d("onStart", "Hello from on start");
         Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
         sendBroadcast(intent);
