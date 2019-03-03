@@ -1,5 +1,7 @@
 package com.kalay.shift.shift.Classes;
 
+import android.app.Activity;
+
 import java.io.Serializable;
 
 /**
@@ -32,4 +34,12 @@ public class User implements Serializable {
     public void setGender(String gender) {
         this.gender = gender;
     }
+
+    public void save(Activity activity){
+        SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
+        manager.storeData(activity,"User",this);
+
+    }
 }
+
+

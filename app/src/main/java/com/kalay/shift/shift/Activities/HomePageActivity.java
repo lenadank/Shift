@@ -25,7 +25,7 @@ public class HomePageActivity extends Activity {
         nameText = findViewById(R.id.welcomeMsg);
         SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
         User user = (User) manager.getStoredData(HomePageActivity.this,"User", User.class);
-        nameText.setText("שלום" + user.getName());
+        nameText.setText(" שלום " + user.getName());
     }
 
     public void changeTimes(View x) {

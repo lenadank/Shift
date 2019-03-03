@@ -9,9 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
-import com.kalay.shift.shift.Classes.PersonalInfo;
+
 import com.kalay.shift.shift.Classes.SharedPreferencesManager;
 import com.kalay.shift.shift.R;
 import com.kalay.shift.shift.Classes.User;
@@ -30,6 +29,14 @@ public class SignUpActivity extends Activity {
 
         editName = (EditText) findViewById(R.id.editName);
         radioGroup = findViewById(R.id.radioGroup);
+
+
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         RadioButton maleButton = findViewById(R.id.male);
         RadioButton femaleButton = findViewById(R.id.female);
 
@@ -78,12 +85,10 @@ public class SignUpActivity extends Activity {
 
         radioButton = findViewById(radioId);
 
-        String name = editName.getText().toString();
+        String name = editName.getText().toString().trim();
         String gender = radioButton.getText().toString();
         User user = new User(name, gender);
-//        new PersonalInfo(SignUpActivity.this, user);
-        SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
-        manager.storeData(SignUpActivity.this,"User",user);
+        user.save(this);
 
 
         Intent intent = new Intent(getApplicationContext(), InterestsActivity.class);
