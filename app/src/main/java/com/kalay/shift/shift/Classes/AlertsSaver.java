@@ -19,6 +19,8 @@ public class AlertsSaver {
     public static final int startKey = 1000;
     private static SharedPreferencesManager sharedPreferencesManager = SharedPreferencesManager.getInstance();
 
+
+
     public AlertsSaver(Activity activity, String alert, String[] hours_arr, boolean [] days_arr, String alertTitle) {
         if (alert != null && !alert.equals("") && hours_arr.length == 2 && days_arr != null) {
             this.alert = new Alert(alert, days_arr, hours_arr, alertTitle);
@@ -46,24 +48,7 @@ public class AlertsSaver {
 
     public AlertsSaver(Activity activity, String key) {
         this.alert = (Alert) sharedPreferencesManager.getStoredData(activity, key, Alert.class);
-//        String alertTitle = ds.substring(0, ds.indexOf(","));
-//        ds = ds.replace(alertTitle, "");
-//        ds = ds.substring(1);
-//        String alert = ds.substring(0, ds.indexOf(","));
-//        ds = ds.replace(alert, "");
-//        ds = ds.substring(2);
         this.key = key;
-//        String hour = ds.substring(0, ds.indexOf("],"));
-//        ds.replace(hour, "");
-//        hour = hour.replace("[", "");
-//        hour = hour.replace("]", "");
-//        ds = ds.replaceAll(" ", "");
-//        boolean[] hours = toBooleanArray(hour);
-//        ds = ds.replaceAll(ds.substring(0, ds.indexOf("],")), "");
-//        ds = ds.replace("[", "");
-//        ds = ds.replace("]", "");
-//        ds = ds.substring(1);
-//        this.alert = new Alert(alertTitle, hours, ds.split(","), alert);
         if (deleted.isEmpty())
             return;
         else
@@ -72,15 +57,6 @@ public class AlertsSaver {
 
     }
 
-
-    // not in use
-    private static boolean[] toBooleanArray(String str) {
-        String[] parts = str.split(",");
-        boolean[] array = new boolean[parts.length];
-        for (int i = 0; i < parts.length; i++)
-            array[i] = Boolean.parseBoolean(parts[i]);
-        return array;
-    }
     public void setInfo(Activity activity, String userInfo) {
         this.alert.setText(userInfo);
         sharedPreferencesManager.storeData(activity, this.key, this.alert);

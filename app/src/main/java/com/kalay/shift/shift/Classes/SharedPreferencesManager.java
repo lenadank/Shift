@@ -46,7 +46,7 @@ public class SharedPreferencesManager {
     }
 
     public String nextEmpty (Activity activity) {
-        SharedPreferences sharedPref = activity.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = activity.getSharedPreferences("database", Context.MODE_PRIVATE);
         int key = AlertsSaver.startKey;
         String data = sharedPref.getString(Integer.toString(key), null);
         while (data != null) {

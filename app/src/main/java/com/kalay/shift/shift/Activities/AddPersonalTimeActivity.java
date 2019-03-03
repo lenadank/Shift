@@ -29,7 +29,7 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
     static final String names[] = {"ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שבת"};
     static CheckBox[] daysArr = new CheckBox[7];
     Spinner dropdown;
-    List<Integer> keyList;
+    List<Integer> keyList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

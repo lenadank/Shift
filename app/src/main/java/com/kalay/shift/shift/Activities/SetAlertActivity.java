@@ -26,7 +26,7 @@ public class SetAlertActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_alert);
-        Button blogin = (Button)findViewById(R.id.button2);
+        Button blogin = (Button)findViewById(R.id.addDefault);
         blogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,10 +37,10 @@ public class SetAlertActivity extends Activity {
                 try {
                     text1 = editText1.getText().toString();
                     text2 = editText2.getText().toString();
-                    AlertsSaver alert = new AlertsSaver(activity, text1, AlertsSaver.hours, AlertsSaver.days, text2);
+                    new AlertsSaver(activity, text1, AlertsSaver.hours, AlertsSaver.days, text2);
                     Toast.makeText(activity, "ALERT " + text2 + " SAVED", Toast.LENGTH_SHORT).show();
                 }
-                catch (NullPointerException e) {
+                catch (Exception e) {
                     Toast.makeText(activity, "ERROR", Toast.LENGTH_SHORT).show();
                 }
 
