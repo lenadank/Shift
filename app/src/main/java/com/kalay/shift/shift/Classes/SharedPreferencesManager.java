@@ -28,7 +28,7 @@ public class SharedPreferencesManager {
         }
         return instance;
     }
-
+    // key is a sort of id that has to be a string. To call something, you need to use its key. //
     public void storeData(Activity activity, String key, Object data) {
         SharedPreferences sharedPref = activity.getSharedPreferences("database", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
@@ -46,7 +46,7 @@ public class SharedPreferencesManager {
     }
 
     public String nextEmpty (Activity activity) {
-        SharedPreferences sharedPref = activity.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = activity.getSharedPreferences("database", Context.MODE_PRIVATE);
         int key = AlertsSaver.startKey;
         String data = sharedPref.getString(Integer.toString(key), null);
         while (data != null) {
@@ -85,6 +85,8 @@ public class SharedPreferencesManager {
         }
         return "NOT EXSIST";
     }
+
+
 
     public void storeData(Activity activity, Map<String, Object> keyDataMap) {
         SharedPreferences sharedPref = activity.getPreferences(Context.MODE_PRIVATE);

@@ -26,22 +26,22 @@ public class SetAlertActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_alert);
-        Button blogin = (Button)findViewById(R.id.button2);
+        Button blogin = (Button)findViewById(R.id.addDefault);
         blogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //todo adds and saves the new alert
-                EditText editText1 = (EditText) v.findViewById(R.id.editText);
-                EditText editText2 = (EditText) v.findViewById(R.id.editText2);
+                EditText editText1 = (EditText) findViewById(R.id.alertText);
+                EditText editText2 = (EditText) findViewById(R.id.alertTitle);
                 String text1, text2;
                 try {
                     text1 = editText1.getText().toString();
                     text2 = editText2.getText().toString();
-                    AlertsSaver alert = new AlertsSaver(activity, text1, AlertsSaver.hours, AlertsSaver.days, text2);
+                    new AlertsSaver(activity, text1, AlertsSaver.hours, AlertsSaver.days, text2);
                     Toast.makeText(activity, "ALERT " + text2 + " SAVED", Toast.LENGTH_SHORT).show();
                 }
-                catch (NullPointerException e) {
-                    Toast.makeText(activity, "OK", Toast.LENGTH_SHORT).show();
+                catch (Exception e) {
+                    Toast.makeText(activity, "ERROR", Toast.LENGTH_SHORT).show();
                 }
 
             }

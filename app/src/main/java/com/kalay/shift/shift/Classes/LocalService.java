@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Random;
 
 
+
 public class LocalService extends Service {
 
     private NotificationManager mNM;
@@ -69,6 +70,7 @@ public class LocalService extends Service {
                         break;
                     }
                 }
+                /* */
                 for (int i = 0; i < myList.size(); i++) {
                     Calendar now = Calendar.getInstance();
                     if (myList.get(i).getAlertDays()[now.get(Calendar.DAY_OF_WEEK)]) {
@@ -92,6 +94,7 @@ public class LocalService extends Service {
                         mNM.notify(NOTIFICATION, notification);
                     }
                 }
+                /* */
                 Log.v("testAlarm","got here!");
 
                 CharSequence text = "נראה לנו שזה הזמן המתאים!";
@@ -108,7 +111,7 @@ public class LocalService extends Service {
                         .setSound(soundUri)
                         .setPriority(Notification.PRIORITY_MAX)
                         .build();
-
+                /* */
                 mNM.notify(NOTIFICATION, notification);
 
             }

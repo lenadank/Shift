@@ -29,7 +29,7 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
     static final String names[] = {"ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שבת"};
     static CheckBox[] daysArr = new CheckBox[7];
     Spinner dropdown;
-    List<Integer> keyList;
+    List<Integer> keyList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +40,12 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
         myList.add("Please select an Item");
         List<String> deleted = AlertsSaver.returnDeltedPlaces(this);
         AlertsSaver alert;
+        /*This loops add all the keys of the valid alerts into keyList.
+          in the end of the loop, i points to the next free key.
+        */
         while (true) {
             try {
-                //Creates alert array and key array
+                //
                 if (deleted.size() == 0 || (deleted.size() != 0 && !deleted.contains(getString(i)))) {
                     alert = new AlertsSaver(this, Integer.toString(i));
                     myList.add(alert.getAlertTitle());
