@@ -53,5 +53,12 @@
             android:onClick="addNotifications"
             android:padding="5dp"
             android:text="הוספת התראה" />
+
+        <Button
+            android:id="@+id/ChangeInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="changeInfo"
+            android:text="שינוי פרטים" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

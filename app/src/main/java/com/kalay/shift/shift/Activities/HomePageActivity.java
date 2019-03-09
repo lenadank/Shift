@@ -28,18 +28,22 @@ public class HomePageActivity extends Activity {
         nameText.setText(" שלום " + user.getName());
     }
 
-    public void changeTimes(View x) {
+    public void changeTimes(View view) {
         Intent myIntent = new Intent(this, AddPersonalTimeActivity.class);
         startActivity(myIntent);
     }
 
-    public void changeInterests(View z) {
+    public void changeInterests(View view) {
         Intent myIntent = new Intent(this, prefrencesChangesActivity.class);
         startActivity(myIntent);
     }
 
-    public void addNotifications(View y) {
+    public void addNotifications(View view) {
         Intent myIntent = new Intent(this, SetAlertActivity.class);
+        startActivity(myIntent);
+    }
+    public void changeInfo(View view){
+        Intent myIntent = new Intent(this,SignUpActivity.class);
         startActivity(myIntent);
     }
 
