@@ -74,7 +74,7 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
         //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<Object> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, myList);
         //set the spinners adapter to the previously created one.
-        dropdown.setAdapter(adapter);b
+        dropdown.setAdapter(adapter);
         FloatingActionButton b1 = (FloatingActionButton) findViewById(R.id.fab);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
