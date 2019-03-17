@@ -126,7 +126,6 @@ public class LocalService extends Service {
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         Calendar tomorrow = GetNextTime();
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, tomorrow.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pintent);
-
     }
 
 
