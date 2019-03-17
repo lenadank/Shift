@@ -1,7 +1,7 @@
 package com.kalay.shift.shift.Activities;
 
 import android.app.Activity;
-import android.app.FragmentManager;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.kalay.shift.shift.Classes.AlertsSaver;
@@ -17,6 +18,7 @@ import com.kalay.shift.shift.R;
 import com.mcsoft.timerangepickerdialog.RangeTimePickerDialog;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -78,14 +80,28 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
             @Override
             public void onClick(View v) {
                 // Create an instance of the dialog fragment and show it
-                RangeTimePickerDialog dialog = new RangeTimePickerDialog();
-                dialog.newInstance();
-                dialog.setRadiusDialog(20); // Set radius of dialog (default is 50)
-                dialog.setIs24HourView(true); // Indicates if the format should be 24 hours
-                dialog.setColorBackgroundHeader(R.color.colorPrimary); // Set Color of Background header dialog
-                dialog.setColorTextButton(R.color.colorPrimaryDark); // Set Text color of button
-                FragmentManager fragmentManager = getFragmentManager();
-                dialog.show(fragmentManager, "");
+//                RangeTimePickerDialog dialog = new RangeTimePickerDialog();
+////                dialog.newInstance();
+////                dialog.setRadiusDialog(20); // Set radius of dialog (default is 50)
+////                dialog.setIs24HourView(true); // Indicates if the format should be 24 hours
+////                dialog.setColorBackgroundHeader(R.color.colorPrimary); // Set Color of Background header dialog
+////                dialog.setColorTextButton(R.color.colorPrimaryDark); // Set Text color of button
+////                FragmentManager fragmentManager = getFragmentManager();
+////                dialog.show(fragmentManager, "");
+                Calendar mcurrentTime = Calendar.getInstance();
+                int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+                int minute = mcurrentTime.get(Calendar.MINUTE);
+                TimePickerDialog mTimePicker;
+                mTimePicker = new TimePickerDialog(AddPersonalTimeActivity.this,android.R.style.Theme_Holo_Light_Dialog, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+                        //todo on time set
+                        //time.setText(selectedHour + ":" + selectedMinute);
+                        timePicker.setIs24HourView(true);
+                    }
+                }, hour, minute, true);//Yes 24 hour time
+                mTimePicker.setTitle("Select Time");
+                mTimePicker.show();
             }
         });
 

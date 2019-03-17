@@ -7,8 +7,6 @@ import android.util.Log;
 import android.view.View;
 
 import com.kalay.shift.shift.Classes.LocalService;
-import com.kalay.shift.shift.Classes.SharedPreferencesManager;
-import com.kalay.shift.shift.Classes.User;
 import com.kalay.shift.shift.R;
 
 public class MainActivity extends Activity {
