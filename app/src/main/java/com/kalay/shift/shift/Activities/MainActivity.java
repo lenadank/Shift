@@ -60,4 +60,3 @@ public class MainActivity extends Activity {
         // todo: InterestsActivity - block user advance in case nothing was selected.
     }
 }
-

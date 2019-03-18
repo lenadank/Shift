@@ -1,64 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:visibility="visible">
 
     <LinearLayout
         android:layout_width="368dp"
-        android:layout_height="495dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="84dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/welcomeMsg"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="91dp"
             android:padding="15dp"
-            android:text=    "דף הבית \n שלום "
+            android:text="דף הבית \n שלום "
 
 
-            />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="changeTimes"
-            android:padding="5dp"
-            android:text="שינוי שעות ההתראות" />
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="changeInterests"
-            android:padding="5dp"
-            android:text="שינוי תחומי עניין" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <Button
             android:id="@+id/button6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/background_light"
             android:onClick="addNotifications"
             android:padding="5dp"
-            android:text="הוספת התראה" />
+            android:text="הוספת התראה"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/ChangeInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_blue_bright"
             android:onClick="changeInfo"
-            android:text="שינוי פרטים" />
+            android:text="שינוי פרטים"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:onClick="changeTimes"
+            android:padding="5dp"
+            android:text="שינוי שעות ההתראות"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:onClick="changeInterests"
+            android:padding="5dp"
+            android:text="שינוי תחומי עניין"
+            android:textSize="30sp" />
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
