@@ -83,7 +83,7 @@ public class SharedPreferencesManager {
                 break;
             }
         }
-        return "NOT EXSIST";
+        return "NOT EXIST";
     }
 
 

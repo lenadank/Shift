@@ -12,7 +12,7 @@ import com.kalay.shift.shift.Classes.User;
 import com.kalay.shift.shift.R;
 
 public class MainActivity extends Activity {
-    public static Activity currActivity;
+    public static Activity currActivity;     // todo: warning on memory leakage.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,4 +36,28 @@ public class MainActivity extends Activity {
         sendBroadcast(intent);
         startActivity(intent);
     }
+    public void knownUserState()
+    {
+        SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
+        User user = (User) manager.getStoredData(MainActivity.this,"User", User.class);
+        if(user == null)
+        {
+            Intent myIntent = new Intent(this, MainActivity.class);
+            startActivity(myIntent);
+        }
+        else if (user.getGender()== null) {
+            Intent myIntent = new Intent(this, SignUpActivity.class);
+            startActivity(myIntent);
+        }
+        else  if(user.getName()== null)    {
+            Intent myIntent = new Intent(this, SignUpActivity.class);
+            startActivity(myIntent);
+           }
+         ///else  if(user.getInterestsActivity == null){
+      //  Intent myIntent = new Intent(this, InterestsActivity.class);
+      //  startActivity(myIntent);
+           //}
+        // todo: InterestsActivity - block user advance in case nothing was selected.
+    }
 }
+
