@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/alertText"
+        android:id="@+id/alertTitle"
         android:layout_width="247dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -44,11 +44,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/alertTitle"></TimePicker>
+        app:layout_constraintTop_toBottomOf="@+id/alertContent"></TimePicker>
 
 
     <EditText
-        android:id="@+id/alertTitle"
+        android:id="@+id/alertContent"
         android:layout_width="246dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
@@ -59,6 +59,6 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/alertText" />
+        app:layout_constraintTop_toBottomOf="@+id/alertTitle" />
 
 </android.support.constraint.ConstraintLayout>

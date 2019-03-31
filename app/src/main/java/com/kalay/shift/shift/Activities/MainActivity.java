@@ -21,7 +21,7 @@ import com.kalay.shift.shift.Classes.User;
 import com.kalay.shift.shift.R;
 
 public class MainActivity extends Activity {
-    private static final String CHANNEL_ID = "channel1";
+    public static final String CHANNEL_ID = "channel1";
 
     public static Activity currActivity;     // todo: warning on memory leakage.
 
@@ -37,28 +37,11 @@ public class MainActivity extends Activity {
 //            startActivity(intent);
 //        }
         createNotificationChannel();
-        // Days, Hours, Title, Content,
-        setAlarm();
         setContentView(R.layout.activity_main);
         currActivity = this;
         startService(new Intent(this, LocalService.class));
     }
 
-    public void setAlarm(){
-        scheduleNotification(getNotification("10 second delay"), 10000);
-    }
-
-    private void scheduleNotification(Notification notification, int delay) {
-
-        Intent notificationIntent = new Intent(this, AlertPublisher.class);
-        notificationIntent.putExtra(AlertPublisher.NOTIFICATION_ID, 1);
-        notificationIntent.putExtra(AlertPublisher.NOTIFICATION, notification);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-
-        long futureInMillis = SystemClock.elapsedRealtime() + delay;
-        AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, pendingIntent);
-    }
 
     private void createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
@@ -76,16 +59,6 @@ public class MainActivity extends Activity {
         }
     }
 
-    private Notification getNotification(String content) {
-        Notification.Builder builder = new Notification.Builder(this);
-        builder.setContentTitle("Scheduled Notification");
-        builder.setContentText(content);
-        builder.setSmallIcon(R.drawable.ic_launcher_background);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            builder.setChannelId(CHANNEL_ID);
-        }
-        return builder.build();
-    }
 
     public void onPressButton(View v) {
         Log.d("onStart", "Hello from on start");
