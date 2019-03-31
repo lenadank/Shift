@@ -23,7 +23,7 @@ public class InterestTripsActivity  extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interest_trips);
         //read input array
-        String names[] = {"עירוני", "טבע", "ג'יפים"};
+        String names[] = {"עירוני" ,"הליכה", "טבע", "ג'יפים"};
         for (int i = 0; i < names.length; i++) {
             //create the UI check box
             final LinearLayout ll = findViewById(R.id.linearLayoutId);

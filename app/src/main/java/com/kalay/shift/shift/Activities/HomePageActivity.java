@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.kalay.shift.shift.Classes.SharedPreferencesManager;
-import com.kalay.shift.shift.Classes.User;
 import com.kalay.shift.shift.R;
 
 /**
@@ -17,33 +15,25 @@ import com.kalay.shift.shift.R;
 public class HomePageActivity extends Activity {
     public TextView nameText;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-        nameText = findViewById(R.id.welcomeMsg);
-        SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
-        User user = (User) manager.getStoredData(HomePageActivity.this,"User", User.class);
-        nameText.setText(" שלום " + user.getName());
+        nameText = findViewById(R.id.textView);
     }
 
-    public void changeTimes(View view) {
+    public void changeTimes(View x) {
         Intent myIntent = new Intent(this, AddPersonalTimeActivity.class);
         startActivity(myIntent);
     }
 
-    public void changeInterests(View view) {
-        Intent myIntent = new Intent(this, prefrencesChangesActivity.class);
+    public void changeInterests(View z) {
+        Intent myIntent = new Intent(this, InterestsActivity.class);
         startActivity(myIntent);
     }
 
-    public void addNotifications(View view) {
+    public void addNotifications(View y) {
         Intent myIntent = new Intent(this, SetAlertActivity.class);
-        startActivity(myIntent);
-    }
-    public void changeInfo(View view){
-        Intent myIntent = new Intent(this,SignUpActivity.class);
         startActivity(myIntent);
     }
 

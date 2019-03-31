@@ -17,6 +17,7 @@
             android:layout_height="244dp"
             android:layout_marginBottom="8dp"
             android:text="ברוכים הבאים    לkalaIBM. האפליקציה תאפשר לך להמשיך להיות פעיל/ה במהלך השבוע. "
+            android:textSize="25sp"
             app:layout_constraintBottom_toTopOf="@+id/button"
             tools:layout_editor_absoluteX="54dp" />
 

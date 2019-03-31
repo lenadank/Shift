@@ -20,7 +20,7 @@ public class prefrencesChangesActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prefrences_changes);
         //read input array
-        String names[] = {"ספורט", "טיולים", "משפחה"};
+        String names[] = {"ספורט", "תרבות ופנאי","טיולים", "משפחה"};
 
         for (int i = 0; i < names.length; i++) {
             //create the UI check box
@@ -41,11 +41,8 @@ public class prefrencesChangesActivity extends Activity {
         }
         new FieldsOfInterest(this, check_info);
     }
-
-    public void moveToHome(View v) {
-        //todo moves to HomePage class
+    public void moveBack (View x) {
         Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
         startActivity(intent);
     }
-
 }
