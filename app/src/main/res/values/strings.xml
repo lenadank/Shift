@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Shift</string>
+    <string name="title_activity_interests_handler">InterestsHandlerActivity</string>
 </resources>
