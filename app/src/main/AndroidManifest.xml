@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kalay.shift.shift">
-
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,27 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".Activities.InterestsHandlerActivity"
-            android:label="@string/title_activity_interests_handler"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Activities.AddPersonalTimeActivity" />
+
+        <activity android:name=".Activities.AddPersonalTimeActivity"/>
         <activity android:name=".Activities.SignUpActivity" />
         <activity android:name=".Activities.InterestsActivity" />
         <activity android:name=".Activities.HomePageActivity" />
         <activity android:name=".Activities.prefrencesChangesActivity" />
         <activity android:name=".Activities.SetAlertActivity" />
-        <activity android:name=".Activities.InterestSportsActivity" />
+        <activity android:name=".Activities.InterestSportsActivity"/>
         <activity android:name=".Activities.InterestCultureActivity" />
         <activity android:name=".Activities.InterestTripsActivity" />
         <activity android:name=".Activities.InterestFamilyActivity" />
         <activity android:name=".Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name=".Classes.AlertPublisher" />
+
     </application>
 
 </manifest>

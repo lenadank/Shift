@@ -6,9 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
-import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -38,43 +36,43 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal_time);
         //create a list of items for the spinner.
-        List<Object> myList = new ArrayList<>();
-        myList.add("Please select an Item");
-        List<String> deleted = AlertsSaver.returnDeltedPlaces(this);
-        AlertsSaver alert;
+        //List<Object> myList = new ArrayList<>();
+        //myList.add("Please select an Item");
+        //List<String> deleted = AlertsSaver.returnDeltedPlaces(this);
+        //AlertsSaver alert;
         /*This loops add all the keys of the valid alerts into keyList.
           in the end of the loop, i points to the next free key.
         */
-        while (true) {
-            try {
-                //
-                if (deleted.size() == 0 || (deleted.size() != 0 && !deleted.contains(getString(i)))) {
-                    alert = new AlertsSaver(this, Integer.toString(i));
-                    myList.add(alert.getAlertTitle());
-                    keyList.add(i);
-                }
-                i++;
-            } catch (Exception e) {
-                break;
-            }
-        }
+//        while (true) {
+//            try {
+//                //
+//                if (deleted.size() == 0 || (deleted.size() != 0 && !deleted.contains(getString(i)))) {
+//                    alert = new AlertsSaver(this, Integer.toString(i));
+//                    myList.add(alert.getAlertTitle());
+//                    keyList.add(i);
+//                }
+//                i++;
+//            } catch (Exception e) {
+//                break;
+//            }
+//        }
 
         //read input array
-        for (int j = 0; j < names.length; j++) {
-            //create the UI check box
-            final LinearLayout ll = findViewById(R.id.linearLayoutId);
-            CheckBox cb = new CheckBox(getApplicationContext());
-            cb.setText(names[j]);
-            ll.addView(cb);
-            daysArr[j] = cb;
-        }
+//        for (int j = 0; j < names.length; j++) {
+//            //create the UI check box
+//            final LinearLayout ll = findViewById(R.id.linearLayoutId);
+//            CheckBox cb = new CheckBox(getApplicationContext());
+//            cb.setText(names[j]);
+//            ll.addView(cb);
+//            daysArr[j] = cb;
+//        }
         //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 
-        dropdown = findViewById(R.id.spinner);
+        //dropdown = findViewById(R.id.spinner);
         //There are multiple variations of this, but this is the basic variant.
-        ArrayAdapter<Object> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, myList);
+        //ArrayAdapter<Object> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, myList);
         //set the spinners adapter to the previously created one.
-        dropdown.setAdapter(adapter);
+        //dropdown.setAdapter(adapter);
         FloatingActionButton b1 = (FloatingActionButton) findViewById(R.id.fab);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
