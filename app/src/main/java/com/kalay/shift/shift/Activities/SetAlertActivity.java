@@ -12,7 +12,6 @@ import com.kalay.shift.shift.Classes.AlertsSaver;
 import com.kalay.shift.shift.R;
 import com.kalay.shift.shift.Classes.SharedPreferencesManager;
 
-
 /**
  * Created by romdolinger on 4/14/18.
  */

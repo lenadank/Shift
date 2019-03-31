@@ -22,8 +22,6 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 
-
-
 public class LocalService extends Service {
 
     private NotificationManager mNM;
@@ -41,11 +39,9 @@ public class LocalService extends Service {
 
     @Override
     public void onCreate() {
-
         mNM = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
         pintent = PendingIntent.getBroadcast(this, 0, new Intent("com.blah.blah.somemessage"), 0);
-
 
         BroadcastReceiver receiver = new BroadcastReceiver() {
 
@@ -159,7 +155,6 @@ public class LocalService extends Service {
     }
 
     private final IBinder mBinder = new LocalBinder();
-
 
     public Calendar GetNotificationTime(int MAXHOUR, int MINHOUR) {
         Calendar today = Calendar.getInstance();
