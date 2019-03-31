@@ -31,8 +31,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
-//        User u = (User) manager.getStoredData(MainActivity.this, "User", User.class);
+//        Shar//        User u = (User) manager.getStoredData(MainActivity.this, "User", User.class);edPreferencesManager manager = SharedPreferencesManager.getInstance();
 //        if(u != null) {
 //            Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
 //            startActivity(intent);

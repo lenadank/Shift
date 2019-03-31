@@ -8,10 +8,10 @@ import java.util.Map;
 public class Interests {
     private List<String> interests = new ArrayList<>();
     private Map<String, List<Notification> > notifications = new HashMap<>();
-    public List<String> getInterests(){
+    public void getInterests(){
 
     }
-    public List<Notification> getNotification (String interest){
+    public void getNotification (String interest){
 
     }
     public void addInterest(String Interest){
