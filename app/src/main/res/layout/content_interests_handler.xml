@@ -10,5 +10,11 @@
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="385dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@color/CyanWater"
+        android:divider="@color/cardview_dark_background"
+        android:scrollbars="horizontal"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
