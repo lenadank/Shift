@@ -13,7 +13,7 @@ public class Interests {
         return new ArrayList<>(notifications.keySet());
     }
 
-    public List<Alert> getNotification(String interest) {
+    public List<Alert> getNotifications(String interest) {
         return notifications.get(interest);
     }
 
