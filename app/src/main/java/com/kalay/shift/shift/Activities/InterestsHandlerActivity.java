@@ -62,7 +62,14 @@ public class InterestsHandlerActivity extends AppCompatActivity {
                 notificationTitles.add(item.first + "\n(No Notification)");
             }
             else{
-                notificationTitles.add(item.first + "\n" + item.second.getAlertTitle());
+                notificationTitles.add(item.first + "\n" + item.second.getAlertTitle() + "\n" + item.second.getDays() + " " + item.second.getHours() );
+               /** todo: add the following code when there is an option to create a notification
+                 if(item.second.getDays() == null){
+                    notificationTitles.add(item.first + "\n" + item.second.getAlertTitle() + "\n" + item.second.getHours());
+                }
+                if(item.second.getHours() == null){
+                    notificationTitles.add(item.first + "\n" + item.second.getAlertTitle() + "\n" + item.second.getDays());
+                } */
             }
         }
         ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, notificationTitles);
