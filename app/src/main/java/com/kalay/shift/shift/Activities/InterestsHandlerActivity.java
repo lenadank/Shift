@@ -21,7 +21,8 @@ import java.util.List;
 
 public class InterestsHandlerActivity extends AppCompatActivity {
     private Interests interests = new Interests();
-    private List<Pair<String, Alert>> items = new ArrayList<>();
+    private List<Pair<String, Integer>> items = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,9 +31,9 @@ public class InterestsHandlerActivity extends AppCompatActivity {
         notificationListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-               // Toast.makeText(getApplicationContext(), "!!!!!" + position, Toast.LENGTH_SHORT).show();
+                // Toast.makeText(getApplicationContext(), "!!!!!" + position, Toast.LENGTH_SHORT).show();
                 //Alert alert = new Alert(null, null, null, "test Title");
-               Intent myIntent = new Intent(getApplicationContext(), AddPersonalTimeActivity.class);
+                Intent myIntent = new Intent(getApplicationContext(), AddPersonalTimeActivity.class);
                 startActivity(myIntent);
             }
         });
@@ -55,26 +56,27 @@ public class InterestsHandlerActivity extends AppCompatActivity {
         List<String> interestList = interests.getInterests();
         for (String interest : interestList) {
             if (interests.getNotifications(interest).isEmpty()) {
-                items.add(new Pair<String, Alert>(interest, null));
+                items.add(new Pair<String, Integer>(interest, null));
             }
-            for (Alert alert : interests.getNotifications(interest)) {
-                items.add(new Pair<>(interest, alert));
+            for (int index = 0; index < interests.getNotifications(interest).size(); index++) {
+                items.add(new Pair<>(interest, index));
             }
         }
 
-        for (Pair<String, Alert> item:items){
-            if (item.second == null){
+        for (Pair<String, Integer> item : items) {
+            if (item.second == null) {
                 notificationTitles.add(item.first + "\n(No Notification)");
-            }
-            else{
-                notificationTitles.add(item.first + "\n" + item.second.getAlertTitle() + "\n" + item.second.getDays() + " " + item.second.getHours() );
-               /** todo: add the following code when there is an option to create a notification
+            } else {
+                List<Alert> notifications = interests.getNotifications(item.first);
+                Alert alert = notifications.get(item.second);
+                notificationTitles.add(item.first + "\n" + alert.getAlertTitle() + "\n" + alert.getDays() + " " + alert.getHours());
+                /** todo: add the following code when there is an option to create a notification
                  if(item.second.getDays() == null){
-                    notificationTitles.add(item.first + "\n" + item.second.getAlertTitle() + "\n" + item.second.getHours());
-                }
-                if(item.second.getHours() == null){
-                    notificationTitles.add(item.first + "\n" + item.second.getAlertTitle() + "\n" + item.second.getDays());
-                } */
+                 notificationTitles.add(item.first + "\n" + item.second.getAlertTitle() + "\n" + item.second.getHours());
+                 }
+                 if(item.second.getHours() == null){
+                 notificationTitles.add(item.first + "\n" + item.second.getAlertTitle() + "\n" + item.second.getDays());
+                 } */
             }
         }
         ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, notificationTitles);
