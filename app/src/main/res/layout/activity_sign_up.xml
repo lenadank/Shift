@@ -10,18 +10,12 @@
     <TextView
         android:id="@+id/textView10"
         android:layout_width="300dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="94dp"
-        android:text="כעת עליך להזין את פרטיך האישיים בהתאם להוראות. "
-        app:layout_constraintBottom_toTopOf="@+id/editName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="spread" />
+        android:layout_height="100dp"
+        android:text="כעת עליך להזין את פרטיך האישיים בהתאם להוראות "
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="60dp" />
 
 
     <EditText
@@ -32,12 +26,16 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:hint="הכנס שם"
         android:focusedByDefault="false"
+        android:hint="הכנס שם"
+        android:textColor="#000000"
+        android:textSize="25dp"
         app:layout_constraintBottom_toTopOf="@+id/textView9"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
 
 
     <TextView
@@ -47,7 +45,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="מין:"
+        android:text="מין"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,9 +58,11 @@
         android:layout_width="311dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9">
 
@@ -70,6 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="זכר"
+            android:textSize="25dp"
 
             tools:layout_editor_absoluteX="241dp"
             tools:layout_editor_absoluteY="370dp" />
@@ -79,6 +81,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="נקבה"
+            android:textSize="25dp"
+            tools:layout_editor_absoluteX="61dp"
+            tools:layout_editor_absoluteY="370dp" />
+
+        <RadioButton
+            android:id="@+id/differnt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="אחר"
+            android:textSize="25dp"
             tools:layout_editor_absoluteX="61dp"
             tools:layout_editor_absoluteY="370dp" />
     </RadioGroup>
@@ -87,37 +99,21 @@
     <Button
         android:id="@+id/bRegister"
         android:layout_width="165dp"
-        android:layout_height="wrap_content"
+        android:layout_height="61dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:backgroundTint="#009999"
         android:onClick="checker"
         android:text="הרשמה"
+        android:textColor="@color/White"
+        android:textSize="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.142" />
-
-    <TextView
-        android:id="@+id/ErrorView"
-        android:layout_width="308dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Error"
-        android:textAlignment="textEnd"
-        android:textColor="@android:color/holo_red_dark"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/bRegister"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.402" />
 
 
 </android.support.constraint.ConstraintLayout>
