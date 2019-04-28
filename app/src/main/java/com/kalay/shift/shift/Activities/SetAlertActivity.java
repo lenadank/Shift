@@ -34,7 +34,8 @@ public class SetAlertActivity extends Activity {
         setContentView(R.layout.activity_set_alert);
 
         timePicker = (TimePicker) findViewById(R.id.timePicker);
-
+        int hour = timePicker.getHour();
+        int minute = timePicker.getMinute();
 //        Button blogin = (Button)findViewById(R.id.addDefault);
 //        blogin.setOnClickListener(new View.OnClickListener() {
 //            @Override
