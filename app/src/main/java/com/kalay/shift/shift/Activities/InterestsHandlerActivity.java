@@ -1,5 +1,7 @@
 package com.kalay.shift.shift.Activities;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Pair;
@@ -28,7 +30,10 @@ public class InterestsHandlerActivity extends AppCompatActivity {
         notificationListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), "!!!!!" + position, Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getApplicationContext(), "!!!!!" + position, Toast.LENGTH_SHORT).show();
+                //Alert alert = new Alert(null, null, null, "test Title");
+               Intent myIntent = new Intent(getApplicationContext(), AddPersonalTimeActivity.class);
+                startActivity(myIntent);
             }
         });
 
