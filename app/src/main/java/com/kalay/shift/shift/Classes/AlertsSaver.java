@@ -21,8 +21,10 @@ public class AlertsSaver {
 
 
 
-    public AlertsSaver(Activity activity, String alert, String[] hours_arr, boolean [] days_arr, String alertTitle) {
-        if (alert != null && !alert.equals("") && hours_arr.length == 2 && days_arr != null) {
+    public AlertsSaver(Activity activity, String alert, String[] hours_arr,
+                       boolean [] days_arr, String alertTitle) {
+        if (alert != null && !alert.equals("") && hours_arr.length == 2 &&
+                days_arr != null) {
             this.alert = new Alert(alert, days_arr, hours_arr, alertTitle);
             this.key = this.sharedPreferencesManager.nextEmpty(activity);
             if (deleted.contains(this.key))

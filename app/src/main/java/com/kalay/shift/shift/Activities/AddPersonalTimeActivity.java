@@ -112,11 +112,20 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
             days[i] = daysArr[i].isChecked();
         //int listCount = dropdown.getSelectedItemPosition();
         //if (listCount > 0) {
+        String[] arr = new String[2];
+        arr[0] = Integer.toString(hour);
+
+        arr[1] = Integer.toString(minute);
+
             String nextKey = SharedPreferencesManager.getInstance().nextEmpty(this);
-            AlertsSaver alert = new AlertsSaver(this, nextKey);
+            AlertsSaver alert = new AlertsSaver(this,alertContent.getText().toString()
+                    ,arr,days,alertTitle.getText().toString());
+
             alert.setDays(this, days);
             Toast.makeText(this, "YOUR DAYS HAVE BEEN SAVED",
                     Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
+        startActivity(intent);
        // } else
             //Toast.makeText(this, "PLEASE SELECT AN ITEM", Toast.LENGTH_SHORT).show();
 
@@ -127,15 +136,17 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
         //todo save the updated alert hours
         int listCount = dropdown.getSelectedItemPosition();
         if (listCount > 0) {
-            AlertsSaver alert = new AlertsSaver(this,
-                    Integer.toString(keyList.get(listCount - 1)));
+           // AlertsSaver alert = new AlertsSaver(this,
+                    // Integer.toString(keyList.get(listCount - 1)));
             String[] arr = new String[2];
+            hour = hourStart;
+            minute = minuteStart;
             arr[0] = Integer.toString(hourStart) + ":" +
                     Integer.toString(minuteStart);
             arr[1] = Integer.toString(hourEnd) + ":" +
                     Integer.toString(minuteEnd);
-            alert.setHours(this, arr);
-            Toast.makeText(this, alert.toString(), Toast.LENGTH_SHORT).show();
+           // alert.setHours(this, arr);
+            //Toast.makeText(this, alert.toString(), Toast.LENGTH_SHORT).show();
         }
         else
             Toast.makeText(this, "PLEASE SELECT AN ITEM", Toast.LENGTH_SHORT).show();
