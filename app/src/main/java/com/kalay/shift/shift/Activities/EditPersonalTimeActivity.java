@@ -9,7 +9,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.design.widget.FloatingActionButton;
 import android.view.View;
 import android.widget.Button;
@@ -35,7 +34,7 @@ import static com.kalay.shift.shift.Activities.MainActivity.CHANNEL_ID;
  * Created by romdolinger on 4/14/18.
  */
 
-public class AddPersonalTimeActivity extends Activity implements RangeTimePickerDialog.ISelectedTime {
+public class EditPersonalTimeActivity extends Activity implements RangeTimePickerDialog.ISelectedTime {
 
     EditText alertTitle;
     EditText alertContent;
@@ -84,7 +83,7 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
                 int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
                 int minute = mcurrentTime.get(Calendar.MINUTE);
                 TimePickerDialog mTimePicker;
-                mTimePicker = new TimePickerDialog(AddPersonalTimeActivity.this,
+                mTimePicker = new TimePickerDialog(EditPersonalTimeActivity.this,
                         android.R.style.Theme_Holo_Light_Dialog,
                         new TimePickerDialog.OnTimeSetListener() {
                     @Override
