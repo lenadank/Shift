@@ -46,8 +46,6 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
     int minute;
 
 
-
-
     int i = AlertsSaver.startKey;
     static final String names[] = {"ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שבת"};
     Spinner dropdown;
@@ -87,16 +85,16 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
                 mTimePicker = new TimePickerDialog(AddPersonalTimeActivity.this,
                         android.R.style.Theme_Holo_Light_Dialog,
                         new TimePickerDialog.OnTimeSetListener() {
-                    @Override
-                    public void onTimeSet(TimePicker timePicker,
-                                          int selectedHour,
-                                          int selectedMinute) {
-                        //todo on time set
-                        System.out.println(selectedHour + "," + selectedMinute);
-                        //time.setText(selectedHour + ":" + selectedMinute);
-                        timePicker.setIs24HourView(true);
-                    }
-                }, hour, minute, true);//Yes 24 hour time
+                            @Override
+                            public void onTimeSet(TimePicker timePicker,
+                                                  int selectedHour,
+                                                  int selectedMinute) {
+                                //todo on time set
+                                System.out.println(selectedHour + "," + selectedMinute);
+                                //time.setText(selectedHour + ":" + selectedMinute);
+                                timePicker.setIs24HourView(true);
+                            }
+                        }, hour, minute, true);//Yes 24 hour time
                 mTimePicker.setTitle("Select Time");
                 mTimePicker.show();
 
@@ -108,17 +106,20 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
     public void onClick(View v) {
         //todo save the updated alert days
         boolean[] days = new boolean[7];
-        for (int i = 0; i < days.length; i++)
+        for (int i = 0; i < days.length; i++) {
             days[i] = daysArr[i].isChecked();
+        }
         //int listCount = dropdown.getSelectedItemPosition();
         //if (listCount > 0) {
-            String nextKey = SharedPreferencesManager.getInstance().nextEmpty(this);
-            AlertsSaver alert = new AlertsSaver(this, nextKey);
-            alert.setDays(this, days);
-            Toast.makeText(this, "YOUR DAYS HAVE BEEN SAVED",
-                    Toast.LENGTH_SHORT).show();
-       // } else
-            //Toast.makeText(this, "PLEASE SELECT AN ITEM", Toast.LENGTH_SHORT).show();
+        String nextKey = SharedPreferencesManager.getInstance().nextEmpty(this);
+        //todo save to shared preferences
+        // AlertsSaver alert = new AlertsSaver(this, nextKey);
+        // alert.setDays(this, days);
+        setAlarm(String.valueOf(alertContent.getText()),10,10);
+        Toast.makeText(this, "YOUR DAYS HAVE BEEN SAVED",
+                Toast.LENGTH_SHORT).show();
+        // } else
+        //Toast.makeText(this, "PLEASE SELECT AN ITEM", Toast.LENGTH_SHORT).show();
 
     }
 
@@ -136,8 +137,7 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
                     Integer.toString(minuteEnd);
             alert.setHours(this, arr);
             Toast.makeText(this, alert.toString(), Toast.LENGTH_SHORT).show();
-        }
-        else
+        } else
             Toast.makeText(this, "PLEASE SELECT AN ITEM", Toast.LENGTH_SHORT).show();
 
     }
@@ -148,10 +148,10 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
         startActivity(intent);
     }
 
-    public void setAlarm(String content, int hours, int minutes){
+    public void setAlarm(String content, int hours, int minutes) {
         minutes = minutes + hours * 60;
         long milliseconds = minutes * 60 * 1000;
-        scheduleNotification(getNotification(content),milliseconds);
+        scheduleNotification(getNotification(content), Calendar.getInstance().getTimeInMillis()+100);
     }
 
     private void scheduleNotification(Notification notification, long time) {
@@ -162,9 +162,10 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         long futureInMillis = time;
-        AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, pendingIntent);
     }
+
     private Notification getNotification(String content) {
         Notification.Builder builder = new Notification.Builder(this);
         builder.setContentTitle("Scheduled Notification");
