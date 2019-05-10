@@ -18,8 +18,10 @@ import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.kalay.shift.shift.Classes.Alert;
 import com.kalay.shift.shift.Classes.AlertPublisher;
 import com.kalay.shift.shift.Classes.AlertsSaver;
+import com.kalay.shift.shift.Classes.Interests;
 import com.kalay.shift.shift.Classes.SharedPreferencesManager;
 import com.kalay.shift.shift.R;
 import com.mcsoft.timerangepickerdialog.RangeTimePickerDialog;
@@ -44,8 +46,11 @@ public class EditPersonalTimeActivity extends Activity implements RangeTimePicke
     int hour;
     int minute;
 
+    String interest;
+    int index;
 
-
+    SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
+    Interests interests = (Interests) manager.getStoredData(this, "Interests", Interests.class);
 
     int i = AlertsSaver.startKey;
     static final String names[] = {"ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שבת"};
@@ -54,7 +59,19 @@ public class EditPersonalTimeActivity extends Activity implements RangeTimePicke
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
+//        SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
+//        interests = (Interests) manager.getStoredData(this, "Interests", Interests.class);
+
+        Bundle bundle = getIntent().getExtras();
+        interest = bundle.getString("interest");
+        index = bundle.getInt("position");
+
+
+
+
 
         //alertTitle = new EditText(getApplicationContext());
         //alertContent = new EditText(getApplicationContext());
@@ -80,8 +97,11 @@ public class EditPersonalTimeActivity extends Activity implements RangeTimePicke
 
 
                 Calendar mcurrentTime = Calendar.getInstance();
-                int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
-                int minute = mcurrentTime.get(Calendar.MINUTE);
+//                int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+                hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+//                int minute = mcurrentTime.get(Calendar.MINUTE);
+                minute = mcurrentTime.get(Calendar.MINUTE);
+
                 TimePickerDialog mTimePicker;
                 mTimePicker = new TimePickerDialog(EditPersonalTimeActivity.this,
                         android.R.style.Theme_Holo_Light_Dialog,
@@ -105,19 +125,26 @@ public class EditPersonalTimeActivity extends Activity implements RangeTimePicke
     }
 
     public void onClick(View v) {
-        //todo save the updated alert days
+
+
+
         boolean[] days = new boolean[7];
         for (int i = 0; i < days.length; i++)
             days[i] = daysArr[i].isChecked();
         //int listCount = dropdown.getSelectedItemPosition();
         //if (listCount > 0) {
             String nextKey = SharedPreferencesManager.getInstance().nextEmpty(this);
-            AlertsSaver alert = new AlertsSaver(this, nextKey);
-            alert.setDays(this, days);
+//            AlertsSaver alert = new AlertsSaver(this, nextKey);
+        Alert alert = new Alert(alertContent.getText().toString(),days,null, alertTitle.getText().toString() );
+//            alert.setDays(this, days);
+
+        interests.addNotification(interest, alert);
+
             Toast.makeText(this, "YOUR DAYS HAVE BEEN SAVED",
                     Toast.LENGTH_SHORT).show();
        // } else
             //Toast.makeText(this, "PLEASE SELECT AN ITEM", Toast.LENGTH_SHORT).show();
+        interests.save(this);
 
     }
 

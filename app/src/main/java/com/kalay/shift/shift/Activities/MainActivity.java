@@ -36,6 +36,7 @@ public class MainActivity extends Activity {
 //            Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
 //            startActivity(intent);
 //        }
+
         createNotificationChannel();
         setContentView(R.layout.activity_main);
         currActivity = this;
@@ -62,7 +63,8 @@ public class MainActivity extends Activity {
 
     public void onPressButton(View v) {
         Log.d("onStart", "Hello from on start");
-        Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
+        //Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
+        Intent intent = new Intent(getApplicationContext(), InterestsHandlerActivity.class);
         sendBroadcast(intent);
         startActivity(intent);
     }

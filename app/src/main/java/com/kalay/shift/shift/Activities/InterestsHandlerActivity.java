@@ -1,5 +1,6 @@
 package com.kalay.shift.shift.Activities;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -13,13 +14,14 @@ import android.widget.Toast;
 
 import com.kalay.shift.shift.Classes.Alert;
 import com.kalay.shift.shift.Classes.Interests;
+import com.kalay.shift.shift.Classes.SharedPreferencesManager;
 import com.kalay.shift.shift.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class InterestsHandlerActivity extends AppCompatActivity {
+public class InterestsHandlerActivity extends Activity {
     private Interests interests = new Interests();
     private List<Pair<String, Integer>> items = new ArrayList<>();
 
@@ -34,10 +36,20 @@ public class InterestsHandlerActivity extends AppCompatActivity {
                 // Toast.makeText(getApplicationContext(), "!!!!!" + position, Toast.LENGTH_SHORT).show();
                 //Alert alert = new Alert(null, null, null, "test Title");
                 Intent myIntent = new Intent(getApplicationContext(), AddPersonalTimeActivity.class);
+                Bundle bundle = new Bundle();
+                String interest = interests.getInterests().get(position);
+                bundle.putString("interest", interest );
+                bundle.putInt("position", position);
+                myIntent.putExtras(bundle);
                 startActivity(myIntent);
             }
         });
+        SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
+        interests = (Interests) manager.getStoredData(InterestsHandlerActivity.this, "Interests", Interests.class);
 
+        if (interests == null){
+            interests = new Interests();
+        }
 
         interests.addInterest("check");
 
@@ -79,9 +91,23 @@ public class InterestsHandlerActivity extends AppCompatActivity {
                  } */
             }
         }
+        interests.save(this);
         ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, notificationTitles);
         notificationListView.setAdapter(itemsAdapter);
 
 
+    }
+
+    public void onClick(View t)
+    {
+        ListView notificationListView = (ListView) findViewById(R.id.notificationListView);
+        interests.addNotification(null,null);
+        Intent myIntent = new Intent(getApplicationContext(), EditPersonalTimeActivity.class);
+        Bundle bundle = new Bundle();
+        String interest = interests.getInterests().get(notificationListView.getFooterViewsCount());
+        bundle.putString("interest", interest );
+        bundle.putInt("position", notificationListView.getFooterViewsCount());
+        myIntent.putExtras(bundle);
+        startActivity(myIntent);
     }
 }

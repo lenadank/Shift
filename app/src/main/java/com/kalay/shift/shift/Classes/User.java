@@ -37,7 +37,7 @@ public class User implements Serializable {
 
     public void save(Activity activity){
         SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
-        manager.storeData(activity,"User",this);
+        manager.storeData(activity,"Interests",this);
 
     }
 }

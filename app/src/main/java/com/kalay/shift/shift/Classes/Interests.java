@@ -1,5 +1,7 @@
 package com.kalay.shift.shift.Classes;
 
+import android.app.Activity;
+
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -44,7 +46,10 @@ public class Interests {
         }
 
     }
-
+    public void save(Activity activity){
+        SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
+        manager.storeData(activity,"Interests",this);
+    }
 
 
 
