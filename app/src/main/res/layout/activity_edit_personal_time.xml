@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <!--<TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
@@ -16,33 +16,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+    -->
     <EditText
         android:id="@+id/alertTitle"
         android:layout_width="247dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_height="82dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="הכנס כותרת התראה"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/alertContent"
-        android:layout_width="246dp"
-        android:layout_height="wrap_content"
+        android:layout_width="255dp"
+        android:layout_height="87dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="הכנס תיאור התראה"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/alertTitle" />
 
@@ -56,7 +56,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:gravity="right"
             android:paddingRight="80dp">
 
@@ -64,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ראשון"
-                android:textSize="20dp" />
+                android:textSize="27dp" />
 
             <CheckBox
                 android:id="@+id/chbSunday"
@@ -74,25 +74,25 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:gravity="right"
             android:paddingRight="80dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="66dp"
                 android:layout_height="wrap_content"
                 android:text="שני"
-                android:textSize="20dp" />
+                android:textSize="27dp" />
 
             <CheckBox
-                android:id="@+id/chbMonday"
+                android:id="@+id/chbMondy"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:gravity="right"
             android:paddingRight="80dp">
 
@@ -100,7 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="שלישי"
-                android:textSize="20dp" />
+                android:textSize="27dp" />
 
             <CheckBox
                 android:id="@+id/chbTuesday"
@@ -110,15 +110,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:gravity="right"
             android:paddingRight="80dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="72dp"
                 android:layout_height="wrap_content"
                 android:text="רביעי"
-                android:textSize="20dp" />
+                android:textSize="27dp" />
 
             <CheckBox
                 android:id="@+id/chbWednesday"
@@ -128,7 +128,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:gravity="right"
             android:paddingRight="80dp">
 
@@ -136,7 +136,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="חמישי"
-                android:textSize="20dp" />
+                android:textSize="27dp" />
 
             <CheckBox
                 android:id="@+id/chbThursday"
@@ -146,7 +146,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:gravity="right"
             android:paddingRight="80dp">
 
@@ -154,7 +154,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="שישי"
-                android:textSize="20dp" />
+                android:textSize="27dp" />
 
             <CheckBox
                 android:id="@+id/chbFriday"
@@ -164,7 +164,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:gravity="right"
             android:paddingRight="80dp">
 
@@ -172,7 +172,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="שבת"
-                android:textSize="20dp" />
+                android:textSize="27dp" />
 
             <CheckBox
                 android:id="@+id/chbSaturday"
@@ -192,6 +192,7 @@
         android:clickable="true"
         app:backgroundTint="@color/cardview_shadow_end_color"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:srcCompat="@drawable/ic_start_time_black_24dp" />
@@ -204,8 +205,8 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="שמור התראה"
         android:onClick="onClick"
+        android:text="שמור התראה"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
