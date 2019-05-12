@@ -1,21 +1,13 @@
 package com.kalay.shift.shift.Activities;
 
 import android.app.Activity;
-import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
-import com.kalay.shift.shift.Classes.AlertsSaver;
-import com.kalay.shift.shift.R;
 import com.kalay.shift.shift.Classes.SharedPreferencesManager;
-
-import java.util.Calendar;
+import com.kalay.shift.shift.R;
 
 
 /**

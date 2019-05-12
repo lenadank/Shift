@@ -9,7 +9,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -73,7 +72,7 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
         daysArr[6] = (CheckBox) findViewById(R.id.chbSaturday);
         saveAlert = (Button) findViewById(R.id.addAlert);
 
-        FloatingActionButton b1 = (FloatingActionButton) findViewById(R.id.btnClock);
+        Button b1 = (Button) findViewById(R.id.btnClock);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

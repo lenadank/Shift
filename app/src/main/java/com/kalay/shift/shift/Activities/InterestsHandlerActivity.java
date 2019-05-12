@@ -1,16 +1,13 @@
 package com.kalay.shift.shift.Activities;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Pair;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.kalay.shift.shift.Classes.Alert;
 import com.kalay.shift.shift.Classes.Interests;
@@ -101,7 +98,7 @@ public class InterestsHandlerActivity extends Activity {
     public void onClick(View t)
     {
         ListView notificationListView = (ListView) findViewById(R.id.notificationListView);
-        interests.addNotification(null,null);
+        //interests.addNotification(null,null);
         Intent myIntent = new Intent(getApplicationContext(), EditPersonalTimeActivity.class);
         Bundle bundle = new Bundle();
         String interest = interests.getInterests().get(notificationListView.getFooterViewsCount());
