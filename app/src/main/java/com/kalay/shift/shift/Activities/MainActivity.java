@@ -1,20 +1,14 @@
 package com.kalay.shift.shift.Activities;
 
 import android.app.Activity;
-import android.app.AlarmManager;
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
 
-import com.kalay.shift.shift.Classes.AlertPublisher;
 import com.kalay.shift.shift.Classes.LocalService;
 import com.kalay.shift.shift.Classes.SharedPreferencesManager;
 import com.kalay.shift.shift.Classes.User;
@@ -64,10 +58,11 @@ public class MainActivity extends Activity {
     public void onPressButton(View v) {
         Log.d("onStart", "Hello from on start");
         //Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
-        Intent intent = new Intent(getApplicationContext(), InterestsHandlerActivity.class);
+        Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
         sendBroadcast(intent);
         startActivity(intent);
     }
+
     public void knownUserState()
     {
         SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
