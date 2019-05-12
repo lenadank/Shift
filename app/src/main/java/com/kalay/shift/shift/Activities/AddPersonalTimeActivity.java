@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.design.widget.FloatingActionButton;
 import android.view.View;
 import android.widget.Button;
@@ -41,8 +42,11 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
     CheckBox[] daysArr;
     Button saveAlert;
 
-    int selectedHour;
-    int selectedMinute;
+    int hour;
+    int minute;
+
+
+
 
     int i = AlertsSaver.startKey;
     static final String names[] = {"ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שבת"};
@@ -74,6 +78,8 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 Calendar mcurrentTime = Calendar.getInstance();
                 int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
                 int minute = mcurrentTime.get(Calendar.MINUTE);
@@ -81,16 +87,16 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
                 mTimePicker = new TimePickerDialog(AddPersonalTimeActivity.this,
                         android.R.style.Theme_Holo_Light_Dialog,
                         new TimePickerDialog.OnTimeSetListener() {
-                            @Override
-                            public void onTimeSet(TimePicker timePicker,
-                                                  int hour,
-                                                  int minute) {
-                                selectedHour = hour;
-                                selectedMinute = minute;
-                                //time.setText(selectedHour + ":" + selectedMinute);
-                                timePicker.setIs24HourView(true);
-                            }
-                        }, hour, minute, true);//Yes 24 hour time
+                    @Override
+                    public void onTimeSet(TimePicker timePicker,
+                                          int selectedHour,
+                                          int selectedMinute) {
+                        //todo on time set
+                        System.out.println(selectedHour + "," + selectedMinute);
+                        //time.setText(selectedHour + ":" + selectedMinute);
+                        timePicker.setIs24HourView(true);
+                    }
+                }, hour, minute, true);//Yes 24 hour time
                 mTimePicker.setTitle("Select Time");
                 mTimePicker.show();
 
@@ -106,14 +112,22 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
             days[i] = daysArr[i].isChecked();
         //int listCount = dropdown.getSelectedItemPosition();
         //if (listCount > 0) {
-        String nextKey = SharedPreferencesManager.getInstance().nextEmpty(this);
-//        AlertsSaver alert = new AlertsSaver(this, nextKey);
-//        alert.setDays(this, days);
-        setAlarm(alertTitle.getText().toString(),days, selectedHour, selectedMinute);
-        Toast.makeText(this, "YOUR DAYS HAVE BEEN SAVED",
-                Toast.LENGTH_SHORT).show();
-        // } else
-        //Toast.makeText(this, "PLEASE SELECT AN ITEM", Toast.LENGTH_SHORT).show();
+        String[] arr = new String[2];
+        arr[0] = Integer.toString(hour);
+
+        arr[1] = Integer.toString(minute);
+
+            String nextKey = SharedPreferencesManager.getInstance().nextEmpty(this);
+            AlertsSaver alert = new AlertsSaver(this,alertContent.getText().toString()
+                    ,arr,days,alertTitle.getText().toString());
+
+            alert.setDays(this, days);
+            Toast.makeText(this, "YOUR DAYS HAVE BEEN SAVED",
+                    Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
+        startActivity(intent);
+       // } else
+            //Toast.makeText(this, "PLEASE SELECT AN ITEM", Toast.LENGTH_SHORT).show();
 
     }
 
@@ -122,16 +136,19 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
         //todo save the updated alert hours
         int listCount = dropdown.getSelectedItemPosition();
         if (listCount > 0) {
-            AlertsSaver alert = new AlertsSaver(this,
-                    Integer.toString(keyList.get(listCount - 1)));
+           // AlertsSaver alert = new AlertsSaver(this,
+                    // Integer.toString(keyList.get(listCount - 1)));
             String[] arr = new String[2];
+            hour = hourStart;
+            minute = minuteStart;
             arr[0] = Integer.toString(hourStart) + ":" +
                     Integer.toString(minuteStart);
             arr[1] = Integer.toString(hourEnd) + ":" +
                     Integer.toString(minuteEnd);
-            alert.setHours(this, arr);
-            Toast.makeText(this, alert.toString(), Toast.LENGTH_SHORT).show();
-        } else
+           // alert.setHours(this, arr);
+            //Toast.makeText(this, alert.toString(), Toast.LENGTH_SHORT).show();
+        }
+        else
             Toast.makeText(this, "PLEASE SELECT AN ITEM", Toast.LENGTH_SHORT).show();
 
     }
@@ -142,21 +159,10 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
         startActivity(intent);
     }
 
-    public void setAlarm(String content, boolean[] days, int hour, int minute) {
-        for (int i = 0; i < daysArr.length; i++) {
-            if (days[i]) {
-                Calendar cal = Calendar.getInstance();
-                //long check1 = System.currentTimeMillis();
-                //long check2 = cal.getTimeInMillis();
-                cal.setFirstDayOfWeek(Calendar.SUNDAY);
-                cal.set(Calendar.DAY_OF_WEEK, cal.SUNDAY +i);
-                cal.set(Calendar.HOUR, hour);
-                cal.set(Calendar.MINUTE, minute);
-                cal.set(Calendar.SECOND, 0);
-                cal.set(Calendar.MILLISECOND, 0);
-                scheduleNotification(getNotification(content),cal.getTimeInMillis());
-            }
-        }
+    public void setAlarm(String content, int hours, int minutes){
+        minutes = minutes + hours * 60;
+        long milliseconds = minutes * 60 * 1000;
+        scheduleNotification(getNotification(content),milliseconds);
     }
 
     private void scheduleNotification(Notification notification, long time) {
@@ -167,11 +173,9 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         long futureInMillis = time;
-        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, futureInMillis, AlarmManager.INTERVAL_DAY * 7, pendingIntent);
-        //alarmManager.set(AlarmManager.RTC_WAKEUP, futureInMillis, pendingIntent);
+        AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, pendingIntent);
     }
-
     private Notification getNotification(String content) {
         Notification.Builder builder = new Notification.Builder(this);
         builder.setContentTitle("Scheduled Notification");
