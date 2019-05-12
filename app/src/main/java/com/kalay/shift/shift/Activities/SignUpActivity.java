@@ -4,16 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-
 import com.kalay.shift.shift.Classes.SharedPreferencesManager;
-import com.kalay.shift.shift.R;
 import com.kalay.shift.shift.Classes.User;
+import com.kalay.shift.shift.R;
 
 public class SignUpActivity extends Activity {
 
@@ -54,24 +52,25 @@ public class SignUpActivity extends Activity {
 
     }
 
+    //todo add ERROR VIEW
     public void checker(View v){
         String name = editName.getText().toString();
         int radioId = radioGroup.getCheckedRadioButtonId();
-        final TextView ErrorText = (TextView) findViewById(R.id.ErrorView);
-
-
-        if ((name.equals("")) && (radioId == -1)){
-            ErrorText.setText("אנא תכניס שם ומין");
-            ErrorText.setVisibility(View.VISIBLE);
-        }
-        if ((!name.equals("")) && (radioId == -1)){
-            ErrorText.setText("אנא תכניס מין");
-            ErrorText.setVisibility(View.VISIBLE);
-        }
-        if ((name.equals("")) && (radioId != -1)){
-            ErrorText.setText("אנא תכניס שם");
-            ErrorText.setVisibility(View.VISIBLE);
-        }
+//        final TextView ErrorText = (TextView) findViewById(R.id.ErrorView);
+//
+//
+//        if ((name.equals("")) && (radioId == -1)){
+//            ErrorText.setText("אנא תכניס שם ומין");
+//            ErrorText.setVisibility(View.VISIBLE);
+//        }
+//        if ((!name.equals("")) && (radioId == -1)){
+//            ErrorText.setText("אנא תכניס מין");
+//            ErrorText.setVisibility(View.VISIBLE);
+//        }
+//        if ((name.equals("")) && (radioId != -1)){
+//            ErrorText.setText("אנא תכניס שם");
+//            ErrorText.setVisibility(View.VISIBLE);
+//        }
         if ((!name.equals("")) && (radioId != -1)) {
             signUpButton(v);
         }
