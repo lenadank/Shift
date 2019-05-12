@@ -20,7 +20,6 @@ import android.widget.Toast;
 import com.kalay.shift.shift.Classes.Alert;
 import com.kalay.shift.shift.Classes.AlertPublisher;
 import com.kalay.shift.shift.Classes.AlertsSaver;
-import com.kalay.shift.shift.Classes.Interests;
 import com.kalay.shift.shift.Classes.SharedPreferencesManager;
 import com.kalay.shift.shift.R;
 import com.mcsoft.timerangepickerdialog.RangeTimePickerDialog;
@@ -49,7 +48,7 @@ public class EditPersonalTimeActivity extends Activity implements RangeTimePicke
     int index;
 
     SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
-    Interests interests = (Interests) manager.getStoredData(this, "Interests", Interests.class);
+    //Interests interests = (Interests) manager.getStoredData(this, "Interests", Interests.class);
 
     int i = AlertsSaver.startKey;
     static final String names[] = {"ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שבת"};
@@ -137,13 +136,13 @@ public class EditPersonalTimeActivity extends Activity implements RangeTimePicke
         Alert alert = new Alert(alertContent.getText().toString(),days,null, alertTitle.getText().toString() );
 //            alert.setDays(this, days);
 
-        interests.addNotification(interest, alert);
+        //interests.addNotification(interest, alert);
 
             Toast.makeText(this, "YOUR DAYS HAVE BEEN SAVED",
                     Toast.LENGTH_SHORT).show();
        // } else
             //Toast.makeText(this, "PLEASE SELECT AN ITEM", Toast.LENGTH_SHORT).show();
-        interests.save(this);
+        //interests.save(this);
 
     }
 
