@@ -90,7 +90,7 @@ public class SignUpActivity extends Activity {
         user.save(this);
 
 
-        Intent intent = new Intent(getApplicationContext(), InterestsActivity.class);
+        Intent intent = new Intent(getApplicationContext(), InterestsHandlerActivity.class);
         startActivity(intent);
     }
 }
