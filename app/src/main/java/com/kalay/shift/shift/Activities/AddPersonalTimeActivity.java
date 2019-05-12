@@ -124,6 +124,7 @@ public class AddPersonalTimeActivity extends Activity implements RangeTimePicker
                     Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
         startActivity(intent);
+
        // } else
             //Toast.makeText(this, "PLEASE SELECT AN ITEM", Toast.LENGTH_SHORT).show();
 

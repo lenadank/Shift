@@ -32,7 +32,7 @@ public class InterestsHandlerActivity extends Activity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // Toast.makeText(getApplicationContext(), "!!!!!" + position, Toast.LENGTH_SHORT).show();
                 //Alert alert = new Alert(null, null, null, "test Title");
-                Intent myIntent = new Intent(getApplicationContext(), AddPersonalTimeActivity.class);
+                Intent myIntent = new Intent(getApplicationContext(), EditPersonalTimeActivity.class);
                 Bundle bundle = new Bundle();
                 String interest = interests.getInterests().get(position);
                 bundle.putString("interest", interest );

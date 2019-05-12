@@ -49,7 +49,7 @@ public class EditPersonalTimeActivity extends Activity implements RangeTimePicke
     int index;
 
     SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
-    Interests interests = (Interests) manager.getStoredData(this, "Interests", Interests.class);
+    Interests interests = (Interests) manager.getStoredData(EditPersonalTimeActivity.this, "Interests", Interests.class);
 
     int i = AlertsSaver.startKey;
     static final String names[] = {"ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שבת"};
@@ -69,14 +69,11 @@ public class EditPersonalTimeActivity extends Activity implements RangeTimePicke
         index = bundle.getInt("position");
 
 
-
-
-
         //alertTitle = new EditText(getApplicationContext());
         //alertContent = new EditText(getApplicationContext());
         daysArr = new CheckBox[7];
         //saveAlert = new Button(getApplicationContext());
-        setContentView(R.layout.activity_personal_time);
+        setContentView(R.layout.activity_edit_personal_time);
 
         alertTitle = (EditText) findViewById(R.id.alertTitle);
         alertContent = (EditText) findViewById(R.id.alertContent);
@@ -105,26 +102,53 @@ public class EditPersonalTimeActivity extends Activity implements RangeTimePicke
                 mTimePicker = new TimePickerDialog(EditPersonalTimeActivity.this,
                         android.R.style.Theme_Holo_Light_Dialog,
                         new TimePickerDialog.OnTimeSetListener() {
-                    @Override
-                    public void onTimeSet(TimePicker timePicker,
-                                          int selectedHour,
-                                          int selectedMinute) {
-                        //todo on time set
-                        System.out.println(selectedHour + "," + selectedMinute);
-                        //time.setText(selectedHour + ":" + selectedMinute);
-                        timePicker.setIs24HourView(true);
-                    }
-                }, hour, minute, true);//Yes 24 hour time
+                            @Override
+                            public void onTimeSet(TimePicker timePicker,
+                                                  int selectedHour,
+                                                  int selectedMinute) {
+                                //todo on time set
+                                System.out.println(selectedHour + "," + selectedMinute);
+                                //time.setText(selectedHour + ":" + selectedMinute);
+                                timePicker.setIs24HourView(true);
+                            }
+                        }, hour, minute, true);//Yes 24 hour time
                 mTimePicker.setTitle("Select Time");
                 mTimePicker.show();
 
             }
         });
+        Button save = (Button) findViewById(R.id.addAlert);
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                boolean[] days = new boolean[7];
+                for (int i = 0; i < days.length; i++)
+                    days[i] = daysArr[i].isChecked();
+                //int listCount = dropdown.getSelectedItemPosition();
+                //if (listCount > 0) {
+                String nextKey = SharedPreferencesManager.getInstance().nextEmpty(EditPersonalTimeActivity.this);
+//            AlertsSaver alert = new AlertsSaver(this, nextKey);
+                Alert alert = new Alert(alertContent.getText().toString(), days, null, alertTitle.getText().toString());
+//            alert.setDays(this, days);
+
+                interests.addNotification(interest, alert);
+
+                Toast.makeText(EditPersonalTimeActivity.this, "Adding Alert",
+                        Toast.LENGTH_SHORT).show();
+                // } else
+                //Toast.makeText(this, "PLEASE SELECT AN ITEM", Toast.LENGTH_SHORT).show();
+                interests.save(EditPersonalTimeActivity.this);
+//        Intent intent = new Intent(getApplicationContext(), InterestsHandlerActivity.class);
+//        startActivity(intent);
+
+
+            }
+
+        });
     }
 
-    public void onClick(View v) {
-
+    public void onClickSave(View v) {
 
 
         boolean[] days = new boolean[7];
@@ -132,18 +156,20 @@ public class EditPersonalTimeActivity extends Activity implements RangeTimePicke
             days[i] = daysArr[i].isChecked();
         //int listCount = dropdown.getSelectedItemPosition();
         //if (listCount > 0) {
-            String nextKey = SharedPreferencesManager.getInstance().nextEmpty(this);
+        String nextKey = SharedPreferencesManager.getInstance().nextEmpty(this);
 //            AlertsSaver alert = new AlertsSaver(this, nextKey);
-        Alert alert = new Alert(alertContent.getText().toString(),days,null, alertTitle.getText().toString() );
+        Alert alert = new Alert(alertContent.getText().toString(), days, null, alertTitle.getText().toString());
 //            alert.setDays(this, days);
 
         interests.addNotification(interest, alert);
 
-            Toast.makeText(this, "YOUR DAYS HAVE BEEN SAVED",
-                    Toast.LENGTH_SHORT).show();
-       // } else
-            //Toast.makeText(this, "PLEASE SELECT AN ITEM", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "YOUR DAYS HAVE BEEN SAVED",
+                Toast.LENGTH_SHORT).show();
+        // } else
+        //Toast.makeText(this, "PLEASE SELECT AN ITEM", Toast.LENGTH_SHORT).show();
         interests.save(this);
+//        Intent intent = new Intent(getApplicationContext(), InterestsHandlerActivity.class);
+//        startActivity(intent);
 
     }
 
@@ -161,8 +187,7 @@ public class EditPersonalTimeActivity extends Activity implements RangeTimePicke
                     Integer.toString(minuteEnd);
             alert.setHours(this, arr);
             Toast.makeText(this, alert.toString(), Toast.LENGTH_SHORT).show();
-        }
-        else
+        } else
             Toast.makeText(this, "PLEASE SELECT AN ITEM", Toast.LENGTH_SHORT).show();
 
     }
@@ -173,10 +198,10 @@ public class EditPersonalTimeActivity extends Activity implements RangeTimePicke
         startActivity(intent);
     }
 
-    public void setAlarm(String content, int hours, int minutes){
+    public void setAlarm(String content, int hours, int minutes) {
         minutes = minutes + hours * 60;
         long milliseconds = minutes * 60 * 1000;
-        scheduleNotification(getNotification(content),milliseconds);
+        scheduleNotification(getNotification(content), milliseconds);
     }
 
     private void scheduleNotification(Notification notification, long time) {
@@ -187,9 +212,10 @@ public class EditPersonalTimeActivity extends Activity implements RangeTimePicke
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         long futureInMillis = time;
-        AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, pendingIntent);
     }
+
     private Notification getNotification(String content) {
         Notification.Builder builder = new Notification.Builder(this);
         builder.setContentTitle("Scheduled Notification");

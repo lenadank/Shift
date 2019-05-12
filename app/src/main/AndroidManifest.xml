@@ -13,6 +13,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Activities.InterestsHandlerActivity"></activity>
         <activity android:name=".Activities.AddPersonalTimeActivity" />
+        <activity android:name=".Activities.EditPersonalTimeActivity" />
         <activity android:name=".Activities.SignUpActivity" />
         <activity android:name=".Activities.InterestsActivity" />
         <activity android:name=".Activities.HomePageActivity" />
