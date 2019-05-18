@@ -1,4 +1,4 @@
-package com.kalay.shift.shift.Activities;
+package com.kalay.shift.shift.NotInUse;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
-import com.kalay.shift.shift.Classes.FieldsOfInterest;
 import com.kalay.shift.shift.R;
 
 import java.util.ArrayList;
@@ -15,15 +14,16 @@ import java.util.ArrayList;
  * Created by User on 06/05/2018.
  */
 
-public class InterestTripsActivity  extends Activity {
+public class InterestCultureActivity  extends Activity {
     ArrayList<CheckBox> check1 = new ArrayList<CheckBox>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_interest_trips);
-        //read input array
-        String names[] = {"עירוני" ,"הליכה", "טבע", "ג'יפים"};
+        setContentView(R.layout.activity_interest_culture);
+
+        //read input array
+        String names[] = {"אתרי אינטרנט", "סרטים", "הצגות"};
         for (int i = 0; i < names.length; i++) {
             //create the UI check box
             final LinearLayout ll = findViewById(R.id.linearLayoutId);
@@ -31,9 +31,9 @@ public class InterestTripsActivity  extends Activity {
             cb.setText(names[i]);
             ll.addView(cb);
             check1.add(cb);
-
         }
     }
+
 
     public void onClose(View v) {
         finish();
@@ -46,7 +46,9 @@ public class InterestTripsActivity  extends Activity {
             if (c1.isChecked())
                 check_info.add(c1.getContext().toString());
         }
-        new FieldsOfInterest(this, check_info);
-        onClose(v);
+        FieldsOfInterest f1 = new FieldsOfInterest(this, check_info);
+        finish();
     }
+
+
 }

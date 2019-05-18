@@ -23,7 +23,6 @@ import com.kalay.shift.shift.Classes.AlertsSaver;
 import com.kalay.shift.shift.Classes.Interests;
 import com.kalay.shift.shift.Classes.SharedPreferencesManager;
 import com.kalay.shift.shift.R;
-import com.mcsoft.timerangepickerdialog.RangeTimePickerDialog;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -35,7 +34,7 @@ import static com.kalay.shift.shift.Activities.MainActivity.CHANNEL_ID;
  * Created by romdolinger on 4/14/18.
  */
 
-public class EditPersonalTimeActivity extends Activity implements RangeTimePickerDialog.ISelectedTime {
+public class EditPersonalTimeActivity extends Activity {
 
     EditText alertTitle;
     EditText alertContent;
@@ -173,7 +172,6 @@ public class EditPersonalTimeActivity extends Activity implements RangeTimePicke
 
     }
 
-    @Override
     public void onSelectedTime(int hourStart, int minuteStart, int hourEnd, int minuteEnd) {
         //todo save the updated alert hours
         int listCount = dropdown.getSelectedItemPosition();
@@ -190,12 +188,6 @@ public class EditPersonalTimeActivity extends Activity implements RangeTimePicke
         } else
             Toast.makeText(this, "PLEASE SELECT AN ITEM", Toast.LENGTH_SHORT).show();
 
-    }
-
-    public void moveToHome(View v) {
-        //todo moves to HomePage class
-        Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
-        startActivity(intent);
     }
 
     public void setAlarm(String content, int hours, int minutes) {

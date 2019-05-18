@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/holo_blue_light"
-            android:onClick="onPressButton"
+            android:onClick="onGetStartButtonPress"
             android:text="בואו נתחיל"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             tools:layout_editor_absoluteX="147dp"

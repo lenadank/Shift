@@ -52,8 +52,6 @@ public class InterestsHandlerActivity extends Activity {
 
         interests.addNotification("test", new Alert(null, null, null, "test Title"));
         interests.addNotification("test", new Alert(null, null, null, "test Title 2.0"));
-
-
     }
 
     @Override

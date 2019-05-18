@@ -4,10 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.kalay.shift.shift.Classes.SharedPreferencesManager;
 import com.kalay.shift.shift.Classes.User;
@@ -15,7 +15,6 @@ import com.kalay.shift.shift.R;
 
 public class SignUpActivity extends Activity {
 
-    Button bRegister;
     EditText editName;
     RadioGroup radioGroup;
     RadioButton radioButton;
@@ -25,11 +24,8 @@ public class SignUpActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        editName = (EditText) findViewById(R.id.editName);
+        editName = findViewById(R.id.editName);
         radioGroup = findViewById(R.id.radioGroup);
-
-
-
     }
 
     @Override
@@ -37,6 +33,7 @@ public class SignUpActivity extends Activity {
         super.onResume();
         RadioButton maleButton = findViewById(R.id.male);
         RadioButton femaleButton = findViewById(R.id.female);
+        RadioButton differntButton = findViewById(R.id.differnt);
 
         SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
         User u = (User) manager.getStoredData(SignUpActivity.this, "User", User.class);
@@ -44,51 +41,47 @@ public class SignUpActivity extends Activity {
             editName.setText(u.getName());
             if (u.getGender().equals("זכר")){
                 maleButton.setChecked(true);
-            }
-            else {
+            }else if (u.getGender().equals("נקבה")){
                 femaleButton.setChecked(true);
+            }else {
+                differntButton.setChecked(true);
             }
         }
 
     }
 
-    //todo add ERROR VIEW
     public void checker(View v){
         String name = editName.getText().toString();
         int radioId = radioGroup.getCheckedRadioButtonId();
-//        final TextView ErrorText = (TextView) findViewById(R.id.ErrorView);
-//
-//
-//        if ((name.equals("")) && (radioId == -1)){
-//            ErrorText.setText("אנא תכניס שם ומין");
-//            ErrorText.setVisibility(View.VISIBLE);
-//        }
-//        if ((!name.equals("")) && (radioId == -1)){
-//            ErrorText.setText("אנא תכניס מין");
-//            ErrorText.setVisibility(View.VISIBLE);
-//        }
-//        if ((name.equals("")) && (radioId != -1)){
-//            ErrorText.setText("אנא תכניס שם");
-//            ErrorText.setVisibility(View.VISIBLE);
-//        }
+
+        String error = "";
+
+        if ((name.equals("")) && (radioId == -1)){
+            error = "אנא הכניס\\י שם ומין";
+        }
+        if ((!name.equals("")) && (radioId == -1)){
+            error = "אנא הכניס\\י מין";
+        }
+        if ((name.equals("")) && (radioId != -1)){
+            error = "אנא הכניס\\י שם";
+        }
         if ((!name.equals("")) && (radioId != -1)) {
             signUpButton(v);
         }
 
-
-
+        if (!error.equals("")){
+            Toast.makeText(this, error, Toast.LENGTH_LONG).show();
+        }
     }
 
     public void signUpButton(View v) {
         int radioId = radioGroup.getCheckedRadioButtonId();
-
         radioButton = findViewById(radioId);
 
         String name = editName.getText().toString().trim();
         String gender = radioButton.getText().toString();
         User user = new User(name, gender);
         user.save(this);
-
 
         Intent intent = new Intent(getApplicationContext(), InterestsHandlerActivity.class);
         startActivity(intent);
