@@ -19,8 +19,6 @@ public class AlertsSaver {
     public static final int startKey = 1000;
     private static SharedPreferencesManager sharedPreferencesManager = SharedPreferencesManager.getInstance();
 
-
-
     public AlertsSaver(Activity activity, String alert, String[] hours_arr,
                        boolean [] days_arr, String alertTitle) {
         if (alert != null && !alert.equals("") && hours_arr.length == 2 &&

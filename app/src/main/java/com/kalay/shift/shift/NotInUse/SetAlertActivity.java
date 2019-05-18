@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TimePicker;
 
-import com.kalay.shift.shift.Activities.AddPersonalTimeActivity;
 import com.kalay.shift.shift.Classes.SharedPreferencesManager;
 import com.kalay.shift.shift.R;
 

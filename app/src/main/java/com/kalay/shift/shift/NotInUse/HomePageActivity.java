@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.kalay.shift.shift.Activities.AddPersonalTimeActivity;
 import com.kalay.shift.shift.R;
 
 /**

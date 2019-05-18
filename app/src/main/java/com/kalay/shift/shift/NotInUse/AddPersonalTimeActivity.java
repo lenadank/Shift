@@ -1,4 +1,4 @@
-package com.kalay.shift.shift.Activities;
+package com.kalay.shift.shift.NotInUse;
 
 import android.app.Activity;
 import android.app.AlarmManager;
@@ -73,8 +73,6 @@ public class AddPersonalTimeActivity extends Activity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 Calendar mcurrentTime = Calendar.getInstance();
                 int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
                 int minute = mcurrentTime.get(Calendar.MINUTE);
@@ -93,7 +91,6 @@ public class AddPersonalTimeActivity extends Activity {
                         }, hour, minute, true);//Yes 24 hour time
                 mTimePicker.setTitle("Select Time");
                 mTimePicker.show();
-
             }
         });
 
