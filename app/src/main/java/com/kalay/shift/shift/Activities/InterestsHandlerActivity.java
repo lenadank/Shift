@@ -34,9 +34,8 @@ public class InterestsHandlerActivity extends Activity {
                 //Alert alert = new Alert(null, null, null, "test Title");
                 Intent myIntent = new Intent(getApplicationContext(), EditPersonalTimeActivity.class);
                 Bundle bundle = new Bundle();
-                String interest = interests.getInterests().get(position);
-                bundle.putString("interest", interest );
-                bundle.putInt("position", position);
+                bundle.putString("interest", items.get(position).first);
+                bundle.putInt("position", items.get(position).second);
                 myIntent.putExtras(bundle);
                 startActivity(myIntent);
             }
@@ -44,26 +43,29 @@ public class InterestsHandlerActivity extends Activity {
         SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
         interests = (Interests) manager.getStoredData(InterestsHandlerActivity.this, "Interests", Interests.class);
 
-        if (interests == null){
+        if (interests == null) {
             interests = new Interests();
         }
 
-        interests.addInterest("check");
-
-        interests.addNotification("test", new Alert(null, null, null, "test Title"));
-        interests.addNotification("test", new Alert(null, null, null, "test Title 2.0"));
+//        interests.addInterest("check");
+//
+//        interests.addNotification("test", new Alert(null, null, null, "test Title"));
+//        interests.addNotification("test", new Alert(null, null, null, "test Title 2.0"));
     }
 
     @Override
     protected void onStart() {
         super.onStart();
 
+        SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
+        interests = (Interests) manager.getStoredData(InterestsHandlerActivity.this, "Interests", Interests.class);
+
         ListView notificationListView = findViewById(R.id.notificationListView);
         List<String> notificationTitles = new ArrayList<>();
         List<String> interestList = interests.getInterests();
         for (String interest : interestList) {
             if (interests.getNotifications(interest).isEmpty()) {
-                items.add(new Pair<String, Integer>(interest, null));
+//                items.add(new Pair<String, Integer>(interest, null));
             }
             for (int index = 0; index < interests.getNotifications(interest).size(); index++) {
                 items.add(new Pair<>(interest, index));
@@ -76,32 +78,22 @@ public class InterestsHandlerActivity extends Activity {
             } else {
                 List<Alert> notifications = interests.getNotifications(item.first);
                 Alert alert = notifications.get(item.second);
-                notificationTitles.add(item.first + "\n" + alert.getAlertTitle() + "\n" + alert.getDays() + " " + alert.getHours());
-                /** todo: add the following code when there is an option to create a notification
-                 if(item.second.getDays() == null){
-                 notificationTitles.add(item.first + "\n" + item.second.getAlertTitle() + "\n" + item.second.getHours());
-                 }
-                 if(item.second.getHours() == null){
-                 notificationTitles.add(item.first + "\n" + item.second.getAlertTitle() + "\n" + item.second.getDays());
-                 } */
+                notificationTitles.add(/*item.first + "\n" +*/ alert.getAlertTitle() + "\n" + alert.getDays() + " " + alert.getHours());
             }
         }
         interests.save(this);
         ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, notificationTitles);
         notificationListView.setAdapter(itemsAdapter);
-
-
     }
 
-    public void onClick(View t)
-    {
+    public void onClick(View t) {
         ListView notificationListView = (ListView) findViewById(R.id.notificationListView);
         //interests.addNotification(null,null);
         Intent myIntent = new Intent(getApplicationContext(), EditPersonalTimeActivity.class);
         Bundle bundle = new Bundle();
-        String interest = interests.getInterests().get(notificationListView.getFooterViewsCount());
-        bundle.putString("interest", interest );
-        bundle.putInt("position", notificationListView.getFooterViewsCount());
+//        String interest = interests.getInterests().get(notificationListView.getFooterViewsCount());
+        bundle.putString("interest", "***");
+        bundle.putInt("position", -1);
         myIntent.putExtras(bundle);
         startActivity(myIntent);
     }

@@ -2,6 +2,7 @@ package com.kalay.shift.shift.Activities;
 
 import android.app.Activity;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -58,7 +59,7 @@ public class EditPersonalTimeActivity extends Activity {
         interests = (Interests) manager.getStoredData(EditPersonalTimeActivity.this, "Interests", Interests.class);
 
         Bundle bundle = getIntent().getExtras();
-        if (bundle != null){
+        if (bundle != null) {
             interest = bundle.getString("interest");
             index = bundle.getInt("position");
         }
@@ -107,36 +108,28 @@ public class EditPersonalTimeActivity extends Activity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(EditPersonalTimeActivity.this,"Adding Alert",Toast.LENGTH_SHORT).show();
+//                Toast.makeText(EditPersonalTimeActivity.this, "Saving Alert", Toast.LENGTH_SHORT).show();
 
-                for (int i = 0; i < daysArr.length; i++){
+                for (int i = 0; i < daysArr.length; i++) {
                     if (daysArr[i].isChecked()) {
                         int requestCode = 0;
-                        AlertManager.setAlarm(getApplicationContext(),alertTitle.getText().toString(),alertContent.getText().toString(), i+1, myHour, myMinute, requestCode);
+                        AlertManager.setAlarm(getApplicationContext(), alertTitle.getText().toString(), alertContent.getText().toString(), i + 1, myHour, myMinute, requestCode);
                         System.out.println(requestCode);
                         //todo save the "requestCode" variable with the alert (in shared preferences) to be able to delete the Alert if needed.
                         //todo to delete alert use AlertManager.deleteAlarm
                     }
                 }
 
-
-                //int listCount = dropdown.getSelectedItemPosition();
-                //if (listCount > 0) {
-                String nextKey = SharedPreferencesManager.getInstance().nextEmpty(EditPersonalTimeActivity.this);
-//            AlertsSaver alert = new AlertsSaver(this, nextKey);
                 Alert alert = new Alert(alertContent.getText().toString(), days, null, alertTitle.getText().toString());
-//            alert.setDays(this, days);
 
-                interests.addNotification(interest, alert);
+                if (index >= 0)
+                    interests.getNotifications(interest).set(index, alert);
+                else
+                    interests.addNotification(interest, alert);
 
-                Toast.makeText(EditPersonalTimeActivity.this, "Adding Alert",
-                        Toast.LENGTH_SHORT).show();
-                // } else
-                //Toast.makeText(this, "PLEASE SELECT AN ITEM", Toast.LENGTH_SHORT).show();
                 interests.save(EditPersonalTimeActivity.this);
-//        Intent intent = new Intent(getApplicationContext(), InterestsHandlerActivity.class);
-//        startActivity(intent);
-
+                Intent intent = new Intent(getApplicationContext(), InterestsHandlerActivity.class);
+                startActivity(intent);
             }
         });
     }

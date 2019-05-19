@@ -50,13 +50,4 @@ public class Interests {
         SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
         manager.storeData(activity,"Interests",this);
     }
-
-
-
-
-
-
-
-
-
 }
