@@ -72,13 +72,14 @@ public class InterestsHandlerActivity extends Activity {
             }
         }
 
+
         for (Pair<String, Integer> item : items) {
             if (item.second == null) {
                 notificationTitles.add(item.first + "\n(No Notification)");
             } else {
                 List<Alert> notifications = interests.getNotifications(item.first);
                 Alert alert = notifications.get(item.second);
-                notificationTitles.add(/*item.first + "\n" +*/ alert.getAlertTitle() + "\n" + alert.getDays() + " " + alert.getHours());
+                notificationTitles.add(/*item.first + "\n" +*/ alert.getAlertTitle() + "\n" + alert.getDaysCompactRep() + " " + alert.getHours());
             }
         }
         interests.save(this);

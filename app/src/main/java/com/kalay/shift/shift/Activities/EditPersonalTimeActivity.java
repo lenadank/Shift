@@ -10,24 +10,21 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
 import com.kalay.shift.shift.Classes.Alert;
 import com.kalay.shift.shift.Classes.AlertManager;
-import com.kalay.shift.shift.Classes.AlertsSaver;
 import com.kalay.shift.shift.Classes.Interests;
 import com.kalay.shift.shift.Classes.SharedPreferencesManager;
 import com.kalay.shift.shift.R;
 
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 
-import static com.kalay.shift.shift.Classes.AlertsSaver.days;
 
 /**
  * Created by romdolinger on 4/14/18.
  */
+
+// fixme: back button duplicates interest list!
 
 public class EditPersonalTimeActivity extends Activity {
 
@@ -45,10 +42,9 @@ public class EditPersonalTimeActivity extends Activity {
     SharedPreferencesManager manager;
     Interests interests;
 
-    int i = AlertsSaver.startKey;
-    static final String names[] = {"ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שבת"};
-    Spinner dropdown;
-    List<Integer> keyList = new ArrayList<>();
+//    static final String names[] = {"ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שבת"};
+//    Spinner dropdown;
+//    List<Integer> keyList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,12 +53,6 @@ public class EditPersonalTimeActivity extends Activity {
 
         manager = SharedPreferencesManager.getInstance();
         interests = (Interests) manager.getStoredData(EditPersonalTimeActivity.this, "Interests", Interests.class);
-
-        Bundle bundle = getIntent().getExtras();
-        if (bundle != null) {
-            interest = bundle.getString("interest");
-            index = bundle.getInt("position");
-        }
 
         //alertTitle = new EditText(getApplicationContext());
         //alertContent = new EditText(getApplicationContext());
@@ -110,8 +100,11 @@ public class EditPersonalTimeActivity extends Activity {
             public void onClick(View v) {
 //                Toast.makeText(EditPersonalTimeActivity.this, "Saving Alert", Toast.LENGTH_SHORT).show();
 
+                boolean[] days = new boolean[daysArr.length];
+
                 for (int i = 0; i < daysArr.length; i++) {
                     if (daysArr[i].isChecked()) {
+                        days[i] = true;
                         int requestCode = 0;
                         AlertManager.setAlarm(getApplicationContext(), alertTitle.getText().toString(), alertContent.getText().toString(), i + 1, myHour, myMinute, requestCode);
                         System.out.println(requestCode);
@@ -120,7 +113,7 @@ public class EditPersonalTimeActivity extends Activity {
                     }
                 }
 
-                Alert alert = new Alert(alertContent.getText().toString(), days, null, alertTitle.getText().toString());
+                Alert alert = new Alert(alertContent.getText().toString(), days, "" + myHour + ":" + myMinute, alertTitle.getText().toString());
 
                 if (index >= 0)
                     interests.getNotifications(interest).set(index, alert);
@@ -132,5 +125,26 @@ public class EditPersonalTimeActivity extends Activity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        interests = (Interests) manager.getStoredData(EditPersonalTimeActivity.this, "Interests", Interests.class);
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            interest = bundle.getString("interest");
+            index = bundle.getInt("position");
+            if (index >= 0) {
+                Alert alert = interests.getNotifications(interest).get(index);
+                alertTitle.setText(alert.getAlertTitle());
+                alertContent.setText("Missing content in Alert class");
+                boolean[] days = alert.getDays();
+                for (int i = 0; i < daysArr.length; i++)
+                    daysArr[i].setChecked(days[i]);
+            }
+        }
+
     }
 }
