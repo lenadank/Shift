@@ -79,7 +79,8 @@ public class InterestsHandlerActivity extends Activity {
             } else {
                 List<Alert> notifications = interests.getNotifications(item.first);
                 Alert alert = notifications.get(item.second);
-                notificationTitles.add(/*item.first + "\n" +*/ alert.getAlertTitle() + "\n" + alert.getDaysCompactRep() + " " + alert.getHours());
+                Pair<Integer, Integer> time = alert.getHours();
+                notificationTitles.add(/*item.first + "\n" +*/ alert.getAlertTitle() + "\n" + alert.getDaysCompactRep() + " " + alert.getTimeAsString());
             }
         }
         interests.save(this);

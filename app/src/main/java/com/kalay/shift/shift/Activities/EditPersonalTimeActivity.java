@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -41,6 +42,7 @@ public class EditPersonalTimeActivity extends Activity {
 
     SharedPreferencesManager manager;
     Interests interests;
+    Alert alert;
 
 //    static final String names[] = {"ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שבת"};
 //    Spinner dropdown;
@@ -74,8 +76,15 @@ public class EditPersonalTimeActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Calendar mcurrentTime = Calendar.getInstance();
-                int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
-                int minute = mcurrentTime.get(Calendar.MINUTE);
+                int hour;
+                int minute;
+                if (alert == null) {
+                    hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+                    minute = mcurrentTime.get(Calendar.MINUTE);
+                } else {
+                    hour = myHour;
+                    minute = myMinute;
+                }
                 TimePickerDialog mTimePicker;
                 mTimePicker = new TimePickerDialog(EditPersonalTimeActivity.this,
                         android.R.style.Theme_Holo_Light_Dialog,
@@ -113,7 +122,7 @@ public class EditPersonalTimeActivity extends Activity {
                     }
                 }
 
-                Alert alert = new Alert(alertContent.getText().toString(), days, "" + myHour + ":" + myMinute, alertTitle.getText().toString());
+                Alert alert = new Alert(alertContent.getText().toString(), days, new Pair<>(myHour, myMinute), alertTitle.getText().toString());
 
                 if (index >= 0)
                     interests.getNotifications(interest).set(index, alert);
@@ -133,18 +142,22 @@ public class EditPersonalTimeActivity extends Activity {
 
         interests = (Interests) manager.getStoredData(EditPersonalTimeActivity.this, "Interests", Interests.class);
         Bundle bundle = getIntent().getExtras();
-        if (bundle != null) {
+        if (bundle == null) {
+            alert = null;
+        } else {
             interest = bundle.getString("interest");
             index = bundle.getInt("position");
             if (index >= 0) {
-                Alert alert = interests.getNotifications(interest).get(index);
+                alert = interests.getNotifications(interest).get(index);
                 alertTitle.setText(alert.getAlertTitle());
                 alertContent.setText("Missing content in Alert class");
                 boolean[] days = alert.getDays();
                 for (int i = 0; i < daysArr.length; i++)
                     daysArr[i].setChecked(days[i]);
+                Pair<Integer, Integer> time = alert.getHours();
+                myHour = time.first;
+                myMinute = time.second;
             }
         }
-
     }
 }
