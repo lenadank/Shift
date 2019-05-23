@@ -1,6 +1,7 @@
 package com.kalay.shift.shift.Classes;
 
 import android.app.Activity;
+import android.util.Pair;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -14,7 +15,7 @@ public class Interests {
     public Interests(){
         notifications.put("***", new ArrayList<Alert>());
         List<Alert> value = notifications.get("***");
-        String[] hours = {"00","00"};
+        Pair<Integer, Integer> hours = new Pair<>(0,0);
         value.add(new Alert("You need to run",new boolean[7],hours,"Run!"));
     }
 

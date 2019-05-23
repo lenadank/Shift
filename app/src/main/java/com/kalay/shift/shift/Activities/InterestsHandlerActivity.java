@@ -107,7 +107,7 @@ public class InterestsHandlerActivity extends Activity {
     public void call(int position){
 
         if (position == -1){
-            String[] hours = {"00","00"};
+            Pair<Integer, Integer> hours = new Pair<>(0,0);
             Alert alert = new Alert("The text of the alert here.", new boolean[7],hours, "Alert name.");
             interests.addInterest("***");
             interests.addNotification("***",alert);
