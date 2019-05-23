@@ -1,5 +1,7 @@
 package com.kalay.shift.shift.Classes;
 
+import android.util.Pair;
+
 import java.io.Serializable;
 import java.util.Arrays;
 
@@ -9,11 +11,11 @@ import java.util.Arrays;
 
 public class Alert implements Serializable {
     private String text;
-    private boolean [] days;
-    private String [] hours;
+    private boolean[] days;
+    private Pair<Integer, Integer> hours;
     private String alertTitle;
 
-    public Alert(String text, boolean[] days, String[] hours, String alertTitle) {
+    public Alert(String text, boolean[] days, Pair<Integer, Integer> hours, String alertTitle) {
         this.text = text;
         this.days = days;
         this.hours = hours;
@@ -40,25 +42,38 @@ public class Alert implements Serializable {
         return days;
     }
 
-    public void setDays(boolean [] days) {
+    private final static String[] dayNames = {"א", "ב", "ג", "ד", "ה", "ו", "ש"};
+
+    public String getDaysCompactRep() {
+        String result = "";
+        for (int i = 0; i < dayNames.length; i++) {
+            System.out.println(days[i]);
+            if (days[i])
+                result += dayNames[i];
+        }
+        return result;
+    }
+
+    public void setDays(boolean[] days) {
         this.days = days;
     }
 
-    public String[] getHours() {
+    public Pair<Integer, Integer> getHours() {
         return hours;
     }
 
-    public void setHours(String[] hours) {
+    public void setHours(Pair<Integer, Integer> hours) {
         this.hours = hours;
     }
 
+    public String getTimeAsString() {
+        return String.format("%02d:%02d", hours.first, hours.second);
+    }
     @Override
     public String toString() {
         return
-                 text + "," + this.alertTitle +
-                "," + Arrays.toString(days) +
-                "," + Arrays.toString(hours);
-
-
+                text + "," + this.alertTitle +
+                        "," + Arrays.toString(days) +
+                        "," + getTimeAsString();
     }
 }

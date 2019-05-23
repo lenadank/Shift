@@ -1,6 +1,9 @@
-package com.kalay.shift.shift.Classes;
+package com.kalay.shift.shift.NotInUse;
 
 import android.app.Activity;
+
+import com.kalay.shift.shift.Classes.Alert;
+import com.kalay.shift.shift.Classes.SharedPreferencesManager;
 
 import java.util.ArrayList;
 import java.util.List;

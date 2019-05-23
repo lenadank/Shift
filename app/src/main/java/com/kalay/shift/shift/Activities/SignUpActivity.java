@@ -9,6 +9,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.kalay.shift.shift.Classes.Interests;
 import com.kalay.shift.shift.Classes.SharedPreferencesManager;
 import com.kalay.shift.shift.Classes.User;
 import com.kalay.shift.shift.R;
@@ -82,6 +83,9 @@ public class SignUpActivity extends Activity {
         String gender = radioButton.getText().toString();
         User user = new User(name, gender);
         user.save(this);
+
+        Interests interests = new Interests();
+        interests.save(this);
 
         Intent intent = new Intent(getApplicationContext(), InterestsHandlerActivity.class);
         startActivity(intent);

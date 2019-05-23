@@ -6,9 +6,7 @@ import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
 
-import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -45,16 +43,16 @@ public class SharedPreferencesManager {
         return gson.fromJson(json, savedClass);
     }
 
-    public String nextEmpty (Activity activity) {
-        SharedPreferences sharedPref = activity.getSharedPreferences("database", Context.MODE_PRIVATE);
-        int key = AlertsSaver.startKey;
-        String data = sharedPref.getString(Integer.toString(key), null);
-        while (data != null) {
-                key++;
-                data =  sharedPref.getString(Integer.toString(key), null);
-        }
-        return Integer.toString(key);
-    }
+//    public String nextEmpty (Activity activity) {
+//        SharedPreferences sharedPref = activity.getSharedPreferences("database", Context.MODE_PRIVATE);
+//        int key = AlertsSaver.startKey;
+//        String data = sharedPref.getString(Integer.toString(key), null);
+//        while (data != null) {
+//                key++;
+//                data =  sharedPref.getString(Integer.toString(key), null);
+//        }
+//        return Integer.toString(key);
+//    }
 
     public void deleteAlert(Activity activity, String key) {
         SharedPreferences sharedPref = activity.getPreferences(Context.MODE_PRIVATE);
@@ -64,27 +62,27 @@ public class SharedPreferencesManager {
     }
 
     //not in use - not working need to be changed
-    public String findByInfo(Activity activity, String info) {
-        int key = 1000;
-        SharedPreferences sharedPref = activity.getPreferences(Context.MODE_PRIVATE);
-        String alert = sharedPref.getString(Integer.toString(key), null);
-        alert = alert.substring(0, alert.indexOf(","));
-        List<String> deleted = AlertsSaver.deleted;
-        while (true)  {
-            try {
-                key++;
-                if (deleted != null && !deleted.contains(key)) {
-                    String alert1 = sharedPref.getString(Integer.toString(key), null);
-                    if (alert1.equals(info))
-                        return Integer.toString(key);
-                }
-            }
-            catch (Exception e) {
-                break;
-            }
-        }
-        return "NOT EXIST";
-    }
+//    public String findByInfo(Activity activity, String info) {
+//        int key = 1000;
+//        SharedPreferences sharedPref = activity.getPreferences(Context.MODE_PRIVATE);
+//        String alert = sharedPref.getString(Integer.toString(key), null);
+//        alert = alert.substring(0, alert.indexOf(","));
+//        List<String> deleted = AlertsSaver.deleted;
+//        while (true)  {
+//            try {
+//                key++;
+//                if (deleted != null && !deleted.contains(key)) {
+//                    String alert1 = sharedPref.getString(Integer.toString(key), null);
+//                    if (alert1.equals(info))
+//                        return Integer.toString(key);
+//                }
+//            }
+//            catch (Exception e) {
+//                break;
+//            }
+//        }
+//        return "NOT EXIST";
+//    }
 
 
 
@@ -101,16 +99,16 @@ public class SharedPreferencesManager {
 
     }
 
-    public String returnKey(Activity activity, String obj){
-        int key = AlertsSaver.startKey;
-        SharedPreferences sharedPref = activity.getPreferences(Context.MODE_PRIVATE);
-        List<String> s = Arrays.asList(sharedPref.getString(Integer.toString(key), null).split(","));
-        while (s.get(0) != obj)  {
-            if (s == null)
-                return "Not Exist!";
-            key++;
-            s = Arrays.asList(sharedPref.getString(Integer.toString(key), null).split(","));
-        }
-        return Integer.toString(key);
-    }
+//    public String returnKey(Activity activity, String obj){
+//        int key = AlertsSaver.startKey;
+//        SharedPreferences sharedPref = activity.getPreferences(Context.MODE_PRIVATE);
+//        List<String> s = Arrays.asList(sharedPref.getString(Integer.toString(key), null).split(","));
+//        while (s.get(0) != obj)  {
+//            if (s == null)
+//                return "Not Exist!";
+//            key++;
+//            s = Arrays.asList(sharedPref.getString(Integer.toString(key), null).split(","));
+//        }
+//        return Integer.toString(key);
+//    }
 }

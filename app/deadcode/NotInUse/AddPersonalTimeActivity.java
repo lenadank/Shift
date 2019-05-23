@@ -18,7 +18,6 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.kalay.shift.shift.Classes.AlertPublisher;
-import com.kalay.shift.shift.Classes.AlertsSaver;
 import com.kalay.shift.shift.Classes.SharedPreferencesManager;
 import com.kalay.shift.shift.R;
 
