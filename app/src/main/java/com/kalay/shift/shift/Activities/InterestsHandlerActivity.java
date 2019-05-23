@@ -30,14 +30,15 @@ public class InterestsHandlerActivity extends Activity {
         notificationListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Toast.makeText(getApplicationContext(), "!!!!!" + position, Toast.LENGTH_SHORT).show();
-                //Alert alert = new Alert(null, null, null, "test Title");
-                Intent myIntent = new Intent(getApplicationContext(), EditPersonalTimeActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("interest", items.get(position).first);
-                bundle.putInt("position", items.get(position).second);
-                myIntent.putExtras(bundle);
-                startActivity(myIntent);
+                call(position);
+//                Toast.makeText(getApplicationContext(), "!!!!!" + position, Toast.LENGTH_SHORT).show();
+//                Alert alert = new Alert(null, null, null, "test Title");
+//                Intent myIntent = new Intent(getApplicationContext(), EditPersonalTimeActivity.class);
+//                Bundle bundle = new Bundle();
+//                bundle.putString("interest", items.get(position).first);
+//                bundle.putInt("position", items.get(position).second);
+//                myIntent.putExtras(bundle);
+//                startActivity(myIntent);
             }
         });
         SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
@@ -78,7 +79,7 @@ public class InterestsHandlerActivity extends Activity {
             } else {
                 List<Alert> notifications = interests.getNotifications(item.first);
                 Alert alert = notifications.get(item.second);
-                notificationTitles.add(/*item.first + "\n" +*/ alert.getAlertTitle() + "\n" + alert.getDays() + " " + alert.getHours());
+                notificationTitles.add(/*item.first + "\n" +*/ alert.getAlertTitle() + "\n" + alert.getText() /* + " " + alert.getHours().toString() */);
             }
         }
         interests.save(this);
@@ -86,15 +87,52 @@ public class InterestsHandlerActivity extends Activity {
         notificationListView.setAdapter(itemsAdapter);
     }
 
-    public void onClick(View t) {
-        ListView notificationListView = (ListView) findViewById(R.id.notificationListView);
-        //interests.addNotification(null,null);
-        Intent myIntent = new Intent(getApplicationContext(), EditPersonalTimeActivity.class);
-        Bundle bundle = new Bundle();
-//        String interest = interests.getInterests().get(notificationListView.getFooterViewsCount());
-        bundle.putString("interest", "***");
-        bundle.putInt("position", -1);
-        myIntent.putExtras(bundle);
-        startActivity(myIntent);
+//    public void onClick(View t) {
+//        ListView notificationListView = (ListView) findViewById(R.id.notificationListView);
+//        //interests.addNotification(null,null);
+//        Intent myIntent = new Intent(getApplicationContext(), EditPersonalTimeActivity.class);
+//        Bundle bundle = new Bundle();
+////        String interest = interests.getInterests().get(notificationListView.getFooterViewsCount());
+//        bundle.putString("interest", "***");
+//        bundle.putInt("position", -1);
+//        myIntent.putExtras(bundle);
+//        startActivity(myIntent);
+//    }
+
+    public void onAdd(View view){
+        call(-1);
     }
+
+
+    public void call(int position){
+
+        if (position == -1){
+            String[] hours = {"00","00"};
+            Alert alert = new Alert("The text of the alert here.", new boolean[7],hours, "Alert name.");
+            interests.addInterest("***");
+            interests.addNotification("***",alert);
+            Intent myIntent = new Intent(getApplicationContext(), EditPersonalTimeActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("interest", "***");
+            bundle.putInt("position", interests.getNotifications("***").size()-2);
+            myIntent.putExtras(bundle);
+            startActivity(myIntent);
+        }
+        else {
+            Intent myIntent = new Intent(getApplicationContext(), EditPersonalTimeActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("interest", "***");
+            bundle.putInt("position", position);
+            myIntent.putExtras(bundle);
+            startActivity(myIntent);
+
+        }
+
+    }
+
+
+
+
+
+
 }

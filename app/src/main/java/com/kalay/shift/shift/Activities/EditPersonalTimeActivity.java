@@ -58,11 +58,7 @@ public class EditPersonalTimeActivity extends Activity {
         manager = SharedPreferencesManager.getInstance();
         interests = (Interests) manager.getStoredData(EditPersonalTimeActivity.this, "Interests", Interests.class);
 
-        Bundle bundle = getIntent().getExtras();
-        if (bundle != null) {
-            interest = bundle.getString("interest");
-            index = bundle.getInt("position");
-        }
+
 
         //alertTitle = new EditText(getApplicationContext());
         //alertContent = new EditText(getApplicationContext());
@@ -79,8 +75,26 @@ public class EditPersonalTimeActivity extends Activity {
         daysArr[5] = findViewById(R.id.chbFriday);
         daysArr[6] = findViewById(R.id.chbSaturday);
 
-        Button b1 = findViewById(R.id.btnClock);
-        b1.setOnClickListener(new View.OnClickListener() {
+
+
+                Button b1 = findViewById(R.id.btnClock);
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            interest = bundle.getString("interest");
+            i = bundle.getInt("position");
+            alertTitle.setText(interests.getNotifications(interest).get(i).getAlertTitle());
+            alertContent.setText(interests.getNotifications(interest).get(i).getText());
+            daysArr[0].setChecked(interests.getNotifications(interest).get(i).getDays()[0]);
+            daysArr[1].setChecked(interests.getNotifications(interest).get(i).getDays()[1]);
+            daysArr[2].setChecked(interests.getNotifications(interest).get(i).getDays()[2]);
+            daysArr[3].setChecked(interests.getNotifications(interest).get(i).getDays()[3]);
+            daysArr[4].setChecked(interests.getNotifications(interest).get(i).getDays()[4]);
+            daysArr[5].setChecked(interests.getNotifications(interest).get(i).getDays()[5]);
+            daysArr[6].setChecked(interests.getNotifications(interest).get(i).getDays()[6]);
+
+        }
+        final String oldAlertTitle = alertTitle.getText().toString();
+                b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Calendar mcurrentTime = Calendar.getInstance();
@@ -109,9 +123,10 @@ public class EditPersonalTimeActivity extends Activity {
             @Override
             public void onClick(View v) {
 //                Toast.makeText(EditPersonalTimeActivity.this, "Saving Alert", Toast.LENGTH_SHORT).show();
-
+                boolean[] activeDays = new boolean[7];
                 for (int i = 0; i < daysArr.length; i++) {
                     if (daysArr[i].isChecked()) {
+                        activeDays[i] = true;
                         int requestCode = 0;
                         AlertManager.setAlarm(getApplicationContext(), alertTitle.getText().toString(), alertContent.getText().toString(), i + 1, myHour, myMinute, requestCode);
                         System.out.println(requestCode);
@@ -120,13 +135,15 @@ public class EditPersonalTimeActivity extends Activity {
                     }
                 }
 
-                Alert alert = new Alert(alertContent.getText().toString(), days, null, alertTitle.getText().toString());
 
-                if (index >= 0)
-                    interests.getNotifications(interest).set(index, alert);
-                else
-                    interests.addNotification(interest, alert);
+                Alert alert = new Alert(alertContent.getText().toString(), activeDays, null, alertTitle.getText().toString());
 
+//                if (index >= 0)
+//                    interests.getNotifications(interest).set(index, alert);
+//                else
+//                    interests.addNotification(interest, alert);
+                interests.removeNotification("***", oldAlertTitle );
+                interests.addNotification("***",alert);
                 interests.save(EditPersonalTimeActivity.this);
                 Intent intent = new Intent(getApplicationContext(), InterestsHandlerActivity.class);
                 startActivity(intent);
