@@ -150,7 +150,7 @@ public class EditPersonalTimeActivity extends Activity {
             if (index >= 0) {
                 alert = interests.getNotifications(interest).get(index);
                 alertTitle.setText(alert.getAlertTitle());
-                alertContent.setText("Missing content in Alert class");
+                alertContent.setText(alert.getText());
                 boolean[] days = alert.getDays();
                 for (int i = 0; i < daysArr.length; i++)
                     daysArr[i].setChecked(days[i]);

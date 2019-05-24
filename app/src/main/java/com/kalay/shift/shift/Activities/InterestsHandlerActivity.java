@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.kalay.shift.shift.Classes.Alert;
 import com.kalay.shift.shift.Classes.Interests;
@@ -64,6 +65,7 @@ public class InterestsHandlerActivity extends Activity {
         ListView notificationListView = findViewById(R.id.notificationListView);
         List<String> notificationTitles = new ArrayList<>();
         List<String> interestList = interests.getInterests();
+        items.clear();
         for (String interest : interestList) {
             if (interests.getNotifications(interest).isEmpty()) {
 //                items.add(new Pair<String, Integer>(interest, null));
@@ -73,17 +75,19 @@ public class InterestsHandlerActivity extends Activity {
             }
         }
 
+        notificationTitles.clear();
+//        Toast.makeText(getApplicationContext(), "Cleared list", Toast.LENGTH_SHORT).show();
         for (Pair<String, Integer> item : items) {
             if (item.second == null) {
                 notificationTitles.add(item.first + "\n(No Notification)");
             } else {
                 List<Alert> notifications = interests.getNotifications(item.first);
                 Alert alert = notifications.get(item.second);
-                notificationTitles.add(/*item.first + "\n" +*/ alert.getAlertTitle() + "\n" + alert.getText() /* + " " + alert.getHours().toString() */);
+                notificationTitles.add(/*item.first + "\n" +*/ alert.getAlertTitle() + "\n" + alert.getText() + "\n" + " " + alert.getDaysCompactRep() + " " + alert.getTimeAsString());
             }
         }
         interests.save(this);
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, notificationTitles);
+        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, notificationTitles);
         notificationListView.setAdapter(itemsAdapter);
     }
 
@@ -99,40 +103,18 @@ public class InterestsHandlerActivity extends Activity {
 //        startActivity(myIntent);
 //    }
 
-    public void onAdd(View view){
+    public void onAdd(View view) {
         call(-1);
     }
 
-
-    public void call(int position){
-
-        if (position == -1){
-            Pair<Integer, Integer> hours = new Pair<>(0,0);
-            Alert alert = new Alert("The text of the alert here.", new boolean[7],hours, "Alert name.");
-            interests.addInterest("***");
-            interests.addNotification("***",alert);
-            Intent myIntent = new Intent(getApplicationContext(), EditPersonalTimeActivity.class);
-            Bundle bundle = new Bundle();
-            bundle.putString("interest", "***");
-            bundle.putInt("position", interests.getNotifications("***").size()-2);
-            myIntent.putExtras(bundle);
-            startActivity(myIntent);
-        }
-        else {
-            Intent myIntent = new Intent(getApplicationContext(), EditPersonalTimeActivity.class);
-            Bundle bundle = new Bundle();
-            bundle.putString("interest", "***");
-            bundle.putInt("position", position);
-            myIntent.putExtras(bundle);
-            startActivity(myIntent);
-
-        }
-
+    public void call(int position) {
+        Bundle bundle = new Bundle();
+        bundle.putString("interest", "***");
+        bundle.putInt("position", position);
+        Intent myIntent = new Intent(getApplicationContext(), EditPersonalTimeActivity.class);
+        myIntent.putExtras(bundle);
+        startActivity(myIntent);
     }
-
-
-
-
 
 
 }
