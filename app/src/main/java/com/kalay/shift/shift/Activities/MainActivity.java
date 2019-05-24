@@ -8,6 +8,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 
+import com.kalay.shift.shift.Classes.Alert;
+import com.kalay.shift.shift.Classes.Interests;
 import com.kalay.shift.shift.Classes.SharedPreferencesManager;
 import com.kalay.shift.shift.Classes.User;
 import com.kalay.shift.shift.R;
@@ -25,6 +27,18 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         createNotificationChannel();
+
+//        SharedPreferencesManager manager = SharedPreferencesManager.getInstance();
+//        Interests interests = (Interests) manager.getStoredData(MainActivity.this, "Interests", Interests.class);
+//        if (interests == null) {
+//            interests = new Interests();
+//        }
+//        String[] hours = {"00","00"};
+//        interests.addNotification("***",new Alert("You need to run",new boolean[7],hours,"Run!"));
+//        interests.save(this);
+
+        //this ^^^ is to enter starting alert or else code go boom.
+
 
 //        Shar//        User u = (User) manager.getStoredData(MainActivity.this, "User", User.class);edPreferencesManager manager = SharedPreferencesManager.getInstance();
 //        if(u != null) {

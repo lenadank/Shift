@@ -1,6 +1,7 @@
 package com.kalay.shift.shift.Classes;
 
 import android.app.Activity;
+import android.util.Pair;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -10,6 +11,15 @@ import java.util.Map;
 public class Interests {
     //private List<String> interests = new ArrayList<>();
     private Map<String, List<Alert>> notifications = new LinkedHashMap<>();
+
+    public Interests(){
+        notifications.put("***", new ArrayList<Alert>());
+        List<Alert> value = notifications.get("***");
+        Pair<Integer, Integer> hours = new Pair<>(0,0);
+        value.add(new Alert("You need to run",new boolean[7],hours,"Run!"));
+    }
+
+
 
     public List<String> getInterests() {
         return new ArrayList<>(notifications.keySet());
@@ -30,7 +40,25 @@ public class Interests {
             value = new ArrayList<Alert>();
             notifications.put(interest, value);
         }
-        value.add(notification);
+
+        boolean idenFound = false;
+
+        for (Alert alert : value){
+
+            if (alert.getAlertTitle() == notification.getAlertTitle()){
+                value.remove(alert);
+                value.add(notification);
+                idenFound = true;
+            }
+
+        }
+
+        if (!idenFound){
+            value.add(notification);
+
+        }
+
+//        value.add(notification);
     }
 
     public void removeInterest(String interest) {
@@ -39,11 +67,16 @@ public class Interests {
             notifications.remove(interest);
     }
 
-    public void removeNotification(String interest, Alert notification){
+    public void removeNotification(String interest, String notification){
         List<Alert> value = notifications.get(interest);
-        if (value.contains(notification)) {
-            value.remove(notification);
+        for (Alert alert : value){
+
+            if (alert.getAlertTitle().equals(notification)){
+                value.remove(alert);
+            }
+
         }
+
 
     }
     public void save(Activity activity){
