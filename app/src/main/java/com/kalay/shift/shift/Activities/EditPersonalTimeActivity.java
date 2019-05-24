@@ -25,8 +25,6 @@ import java.util.Calendar;
  * Created by romdolinger on 4/14/18.
  */
 
-// fixme: back button duplicates interest list!
-
 public class EditPersonalTimeActivity extends Activity {
 
     EditText alertTitle;
