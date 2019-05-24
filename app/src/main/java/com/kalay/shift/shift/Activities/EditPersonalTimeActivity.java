@@ -137,8 +137,8 @@ public class EditPersonalTimeActivity extends Activity {
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
+    protected void onStart() {
+        super.onStart();
 
         interests = (Interests) manager.getStoredData(EditPersonalTimeActivity.this, "Interests", Interests.class);
         Bundle bundle = getIntent().getExtras();
