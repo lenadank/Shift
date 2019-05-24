@@ -109,8 +109,14 @@ public class InterestsHandlerActivity extends Activity {
 
     public void call(int position) {
         Bundle bundle = new Bundle();
-        bundle.putString("interest", "***");
-        bundle.putInt("position", position);
+        if (position < 0) {
+            bundle.putString("interest", "***");
+            bundle.putInt("position", position);
+        }
+        else {
+            bundle.putString("interest", items.get(position).first);
+            bundle.putInt("position", items.get(position).second);
+        }
         Intent myIntent = new Intent(getApplicationContext(), EditPersonalTimeActivity.class);
         myIntent.putExtras(bundle);
         startActivity(myIntent);
